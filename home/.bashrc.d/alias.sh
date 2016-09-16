@@ -1,0 +1,6 @@
+alias grep='grep --color=auto'
+alias less='less -R'
+alias ls='ls --color=auto -ahl'
+alias lsd='ls | grep ^d'
+alias lsf='ls | grep ^-'
+alias lsl='ls | grep ^l'

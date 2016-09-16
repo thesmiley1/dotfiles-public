@@ -19,3 +19,4 @@ source_if_exists "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source_if_exists "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 
 source_if_exists "$HOME/.bashrc.d/alias.sh"
+source_if_exists "$HOME/.bashrc.d/history.sh"

@@ -15,6 +15,8 @@ source_if_exists() {
   fi
 }
 
+source_if_exists "/usr/share/bash-completion/bash_completion"
+
 source_if_exists "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source_if_exists "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 

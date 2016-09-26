@@ -20,6 +20,8 @@ source_if_exists "/usr/share/git-core/contrib/completion/git-prompt.sh" # redhat
 source_if_exists "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source_if_exists "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 
+source_if_exists "$HOME/.rvm/scripts/rvm"
+
 source_if_exists "$HOME/.bashrc.d/alias.sh"
 source_if_exists "$HOME/.bashrc.d/env.sh"
 source_if_exists "$HOME/.bashrc.d/history.sh"

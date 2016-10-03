@@ -24,3 +24,5 @@ source_if_exists "$HOME/.bashrc.d/alias.sh"
 source_if_exists "$HOME/.bashrc.d/env.sh"
 source_if_exists "$HOME/.bashrc.d/history.sh"
 source_if_exists "$HOME/.bashrc.d/ps1.sh"
+
+source_if_exists "$HOME/.bashrc.d/work.sh"

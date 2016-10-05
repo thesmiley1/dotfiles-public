@@ -7,6 +7,12 @@ filetype indent on
 " tabs are spaces
 set expandtab
 
+" show whitespace characters
+set list
+
+" set whitespace characters
+set listchars=eol:¬,tab:»-,trail:~,extends:>,precedes:<,space:·
+
 " show line numbers
 set number
 
@@ -18,3 +24,9 @@ set tabstop=2
 
 " enable syntax processing
 syntax enable
+
+" highlight·non-text·characters·light·gray
+highlight NonText ctermfg=7
+
+" highlight·special·keys·light·gray
+highlight SpecialKey ctermfg=7

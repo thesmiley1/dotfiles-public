@@ -25,5 +25,6 @@ source_if_exists "$HOME/.bashrc.d/env.sh"
 source_if_exists "$HOME/.bashrc.d/history.sh"
 source_if_exists "$HOME/.bashrc.d/path.sh"
 source_if_exists "$HOME/.bashrc.d/ps1.sh"
+source_if_exists "$HOME/.bashrc.d/zip.sh"
 
 source_if_exists "$HOME/.bashrc.d/work.sh"

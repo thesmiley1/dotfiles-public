@@ -25,8 +25,8 @@ set tabstop=2
 " enable syntax processing
 syntax enable
 
-" highlight·non-text·characters·light·gray
+" highlight non-text characters light gray
 highlight NonText ctermfg=7
 
-" highlight·special·keys·light·gray
+" highlight special keys light gray
 highlight SpecialKey ctermfg=7

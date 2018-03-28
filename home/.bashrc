@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC1090
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 

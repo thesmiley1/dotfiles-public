@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 append_path_if_exists() {
   if [[ -d $1 ]]
   then

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 gzdir() {
   local input="$1"
   local output="${2:-`basename "$input"`.tar.gz}"

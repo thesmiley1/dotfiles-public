@@ -1,19 +1,25 @@
 #!/usr/bin/env bash
 
-function lsx() {
+function lsg() {
+  local name="$1"
+  local dir="${2:-.}"
+  find "$dir" -maxdepth 1 -name "*$name*" -exec ls -adhl --color=auto {} \+
+}
+
+function lst() {
   local type="$1"
   local dir="${2:-.}"
   find "$dir" -maxdepth 1 -type "$type" -exec ls -adhl --color=auto {} \+
 }
 
 function lsd() {
-  lsx d "$1"
+  lst d "$1"
 }
 
 function lsf() {
-  lsx f "$1"
+  lst f "$1"
 }
 
 function lsl() {
-  lsx l "$1"
+  lst l "$1"
 }

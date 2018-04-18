@@ -1,8 +1,8 @@
 " use default color scheme
 colorscheme default
 
-" turn on filetype detection and load filetype-specific indent files
-filetype indent on
+" turn on filetype detection and load filetype-specific indent and plugin files
+filetype indent plugin on
 
 " tabs are spaces
 set expandtab

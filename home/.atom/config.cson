@@ -25,4 +25,4 @@
     showOnStartup: false
 ".go.source":
   editor:
-    tabType: "auto"
+    tabType: "hard"

@@ -1,0 +1,28 @@
+"*":
+  core:
+    closeDeletedFileTabs: true
+    disabledPackages: [
+      "exception-reporting"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "one-light-ui"
+      "one-light-syntax"
+    ]
+  editor:
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+  "go-plus":
+    lint:
+      args: [
+        "--vendor"
+      ]
+    test: {}
+  "linter-ui-default":
+    showPanel: true
+  welcome:
+    showOnStartup: false
+".go.source":
+  editor:
+    tabType: "auto"

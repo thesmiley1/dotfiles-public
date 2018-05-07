@@ -4,6 +4,12 @@
 # https://unix.stackexchange.com/a/334022
 export EDITOR="vim"
 
+# default options for less
+# -i   search case insensitive by default
+# -R   output raw ANSI color escape sequences (enable color output)
+# -x2  output two spaces for tabs
+export LESS="-iRx2"
+
 # less is more, right?
 export PAGER="less"
 

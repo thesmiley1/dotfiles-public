@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 alias grep='grep --color=auto'
-alias less='less -R'
 alias ls='ls --color=auto -ahl'
 alias ssv='vagrant ssh'
 alias vbox='VBoxManage'

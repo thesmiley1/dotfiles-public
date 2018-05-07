@@ -1,25 +1,18 @@
 #!/usr/bin/env bash
 
 function lsg() {
-  local name="$1"
-  local dir="${2:-.}"
-  find "$dir" -maxdepth 1 -name "*$name*" -exec ls -adhl --color=auto {} \+
-}
-
-function lst() {
-  local type="$1"
-  local dir="${2:-.}"
-  find "$dir" -maxdepth 1 -type "$type" -exec ls -adhl --color=auto {} \+
+  # shellcheck disable=SC2010
+  ls | grep "$@"
 }
 
 function lsd() {
-  lst d "$1"
+  lsg "^d"
 }
 
 function lsf() {
-  lst f "$1"
+  lsg "^-"
 }
 
 function lsl() {
-  lst l "$1"
+  lsg "^l"
 }

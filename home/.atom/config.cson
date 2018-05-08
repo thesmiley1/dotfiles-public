@@ -19,8 +19,9 @@
         "--vendor"
       ]
     test: {}
-  "linter-ui-default":
-    showPanel: true
+  "linter-shellcheck":
+    enableNotice: true
+  "linter-ui-default": {}
   welcome:
     showOnStartup: false
 ".go.source":

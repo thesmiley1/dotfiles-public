@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-if [[ `type homeshick 2> /dev/null` ]]; then
+if type homeshick > /dev/null 2>&1; then
   homeshick refresh
 fi

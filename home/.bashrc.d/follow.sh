@@ -3,10 +3,8 @@
 function follow() {
   local path="${1:-.}"
 
-  local real
-  real="$(realpath -e $path)"
-  if [[ "$?" == "0" ]]; then
-    cd "$real" || return "$?"
+  if realpath -e "$path" > /dev/null 2>&1; then
+    cd "$(realpath -e "$path")" || exit "$?"
   else
     return "$?"
   fi

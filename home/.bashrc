@@ -7,7 +7,7 @@
 source_if_exists() {
   if [[ -s $1 ]]
   then
-    source $1
+    source "$1"
     return 0
   else
     return 1

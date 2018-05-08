@@ -34,7 +34,7 @@ function gzdir() {
     local compressor="gzip"
   fi
 
-  zdir $input $output $compressor
+  zdir "$input" "$output" "$compressor"
 }
 
 function xzdir() {

@@ -2,3 +2,5 @@
 	prune = true
 [log]
 	showSignature = true
+[pull]
+	rebase = true

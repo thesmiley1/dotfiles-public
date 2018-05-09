@@ -4,3 +4,5 @@
 	showSignature = true
 [pull]
 	rebase = true
+[core]
+	pager = less -x1,3

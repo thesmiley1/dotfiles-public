@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+alias diff='diff --color=auto -u'
+
 alias grep='grep --color=auto'
 
 alias ls='ls --color=always -ahl'

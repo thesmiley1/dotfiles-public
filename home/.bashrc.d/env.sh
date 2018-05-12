@@ -10,6 +10,11 @@ export EDITOR="vim"
 # -x2  output two spaces for tabs
 export LESS="-iRx2"
 
+# use pygments instead of code2color with lesspipe
+if type -t pygmentize > /dev/null; then
+  export LESSCOLORIZER="pygmentize"
+fi
+
 # less is more, right?
 export PAGER="less"
 

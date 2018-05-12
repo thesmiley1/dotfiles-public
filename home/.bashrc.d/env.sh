@@ -14,7 +14,7 @@ export LESS="-iRx2"
 export PAGER="less"
 
 # append GOBIN or GOPATH/bin to PATH
-if which go > /dev/null 2>&1; then
+if type -t go > /dev/null; then
   if [[ -n $(go env GOBIN) ]]; then
     PATH="$PATH:$(go env GOBIN)"
   else

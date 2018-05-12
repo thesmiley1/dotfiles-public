@@ -28,7 +28,7 @@ function gzdir() {
   local input="$1"
   local output="${2:-$(basename "$input").tar.gz}"
 
-  if [[ $(which pigz 2> /dev/null) ]]; then
+  if type -t pigz > /dev/null; then
     local compressor="pigz"
   else
     local compressor="gzip"
@@ -49,7 +49,7 @@ function untar() {
 
   local extension="${input#*.}"
   if [[ "$extension" == "tar.gz" ]]; then
-    if [[ $(which pigz 2> /dev/null ) ]]; then
+    if type -t pigz > /dev/null; then
       tar -xv --use-compress-program="pigz" -f "$input"
     else
       tar -xv --use-compress-program="gzip" -f "$input"

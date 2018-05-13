@@ -17,6 +17,7 @@
     lint:
       args: [
         "--vendor"
+        "--fast"
       ]
     test: {}
   "linter-shellcheck":

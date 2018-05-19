@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
-alias diff='diff --color=auto -u'
+alias diff="diff --color=auto -u"
 
-alias grep='grep --color=auto'
+alias grep="grep --color=auto"
 
-alias ls='ls --color=always -ahl'
+alias ls="ls --color=always -ahl"
 
-alias ssv='vagrant ssh'
+alias ssv="vagrant ssh"
 
-alias vbox='VBoxManage'
+alias vbox="VBoxManage"
 
-alias vh='vagrant halt'
+alias vh="vagrant halt"
 
-alias vs='vagrant status'
+alias vs="vagrant status"
 
-alias vu='vagrant up'
+alias vu="vagrant up"

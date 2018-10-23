@@ -2,6 +2,10 @@
 
 alias diff="diff --color=auto -u"
 
+alias ffmpeg="ffmpeg -hide_banner"
+
+alias ffprobe="ffprobe -hide_banner"
+
 alias grep="grep --color=auto"
 
 alias ls="ls --color=always -ahl"

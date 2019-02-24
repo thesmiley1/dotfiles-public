@@ -10,6 +10,10 @@ alias grep="grep --color=auto"
 
 alias ls="ls --color=always -ahl"
 
+if type -t htop > /dev/null; then
+  alias top="htop"
+fi
+
 if type -t trash > /dev/null; then
   alias rm="trash"
 fi

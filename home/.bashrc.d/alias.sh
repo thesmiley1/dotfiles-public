@@ -2,6 +2,10 @@
 
 alias diff="diff --color=auto -u"
 
+if type -t ncdu > /dev/null; then
+  alias du="ncdu"
+fi
+
 alias ffmpeg="ffmpeg -hide_banner"
 
 alias ffprobe="ffprobe -hide_banner"

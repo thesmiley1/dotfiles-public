@@ -5,4 +5,4 @@
 [pull]
 	rebase = true
 [core]
-	pager = less -x1,3
+	pager = less -F -x1,3

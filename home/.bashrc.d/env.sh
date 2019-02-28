@@ -10,6 +10,11 @@ export EDITOR="vim"
 # -x2  output two spaces for tabs
 export LESS="-iRx2"
 
+# support syntax highlighting in less via source-highlight if available
+if type -t src-hilite-lesspipe.sh > /dev/null; then
+  export LESSOPEN="| src-hilite-lesspipe.sh %s"
+fi
+
 # use pygments instead of code2color with lesspipe
 if type -t pygmentize > /dev/null; then
   export LESSCOLORIZER="pygmentize"

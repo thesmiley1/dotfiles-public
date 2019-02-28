@@ -1,0 +1,49 @@
+# include system config
+$include /etc/inputrc
+
+# briefly move cursor to matching opening parenthesis
+set blink-matching-paren On
+
+# display colored completion prefixes
+set colored-completion-prefix On
+
+# display colored completions
+set colored-stats On
+
+# display each completion on its own line
+set completion-display-width 0
+
+# set case-insensitive completion
+set completion-ignore-case On
+
+# treat underscore and hyphen as the same for completions
+set completion-map-case On
+
+# set vi editing mode
+set editing-mode vi
+
+# prevent pasted characters from being interpreted as editing commands
+set enable-bracketed-paste On
+
+# add a string to the beginning of the prompt indicating the editing mode
+set show-mode-in-prompt On
+
+# set vi command mode prompt to custom dark gray
+set vi-cmd-mode-string "\e[90m[cmd]"
+
+# set vi insert mode pode prompt to custom dark gray
+set vi-ins-mode-string "\e[90m[ins]"
+
+# custom key mappings
+$if mode=vi
+set keymap vi-command
+# these are for vi-command mode
+"j": menu-complete
+"k": menu-complete-backward
+"\C-j": history-search-forward
+"\C-k": history-search-backward
+set keymap vi-insert
+# these are for vi-insert mode
+"\C-j": menu-complete
+"\C-k": menu-complete-backward
+$endif

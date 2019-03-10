@@ -33,7 +33,7 @@ if type -t go > /dev/null; then
 fi
 
 # a magic incation if there ever was one
-export PS1="\\[\\033[0;35m\\]\\u\\[\\033[0;30m\\]@\\[\\033[0;33m\\]\\h\\[\\033[0;30m\\]:\\[\\033[0;34m\\]\\w\\[\\033[0;32m\\]\$(__git_ps1 '(%s)')\\[\\033[0m\\]\\\$ "
+export PS1="\\[\\033[0;35m\\]\\u\\[\\033[0;37m\\]@\\[\\033[0;33m\\]\\h\\[\\033[0;37m\\]:\\[\\033[0;34m\\]\\w\\[\\033[0;32m\\]\$(__git_ps1 '(%s)')\\[\\033[0m\\]\\\$ "
 
 # set SSH_AUTH_SOCK to point to gpg-agent socket, if it exists
 if [[ -n "$XDG_RUNTIME_DIR" && -S "${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh" ]]; then

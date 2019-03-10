@@ -29,10 +29,10 @@ set enable-bracketed-paste On
 set show-mode-in-prompt On
 
 # set vi command mode prompt to custom dark gray
-set vi-cmd-mode-string "\e[90m[cmd]"
+set vi-cmd-mode-string "\e[37m[cmd]"
 
 # set vi insert mode pode prompt to custom dark gray
-set vi-ins-mode-string "\e[90m[ins]"
+set vi-ins-mode-string "\e[37m[ins]"
 
 # custom key mappings
 $if mode=vi

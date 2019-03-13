@@ -2,7 +2,7 @@
 
 function lsg() {
   # shellcheck disable=SC2010
-  ls | grep "$@"
+  ls | grep -i "$@"
 }
 
 function lsd() {

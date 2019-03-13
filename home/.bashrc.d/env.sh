@@ -4,6 +4,12 @@
 # https://unix.stackexchange.com/a/334022
 export EDITOR="vim"
 
+if type -t gpg-connect-agent > /dev/null; then
+  GPG_TTY=$(tty)
+  export GPG_TTY
+  gpg-connect-agent updatestartuptty /bye > /dev/null
+fi
+
 # default options for less
 # -i   search case insensitive by default
 # -R   output raw ANSI color escape sequences (enable color output)

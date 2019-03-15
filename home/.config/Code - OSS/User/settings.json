@@ -1,0 +1,18 @@
+{
+  "editor.emptySelectionClipboard": false,
+  "editor.renderFinalNewline": true,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  
+  "window.restoreWindows": "none",
+  "window.titleBarStyle": "native",
+    
+  "[python]": {
+    "editor.tabSize": 4
+  }
+}

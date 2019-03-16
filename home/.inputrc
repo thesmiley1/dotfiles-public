@@ -25,15 +25,6 @@ set editing-mode vi
 # prevent pasted characters from being interpreted as editing commands
 set enable-bracketed-paste On
 
-# add a string to the beginning of the prompt indicating the editing mode
-set show-mode-in-prompt On
-
-# set vi command mode prompt to custom dark gray
-set vi-cmd-mode-string "\e[37m[cmd]"
-
-# set vi insert mode pode prompt to custom dark gray
-set vi-ins-mode-string "\e[37m[ins]"
-
 # custom key mappings
 $if mode=vi
 set keymap vi-command

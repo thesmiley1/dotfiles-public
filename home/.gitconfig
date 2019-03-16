@@ -6,3 +6,7 @@
 	rebase = true
 [core]
 	pager = less -F -x1,3
+[commit]
+	gpgsign = true
+[user]
+	signingkey = 61D4254BB506AB28

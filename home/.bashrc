@@ -32,6 +32,7 @@ source_if_exists "$HOME/.bashrc.d/lsx.sh"
 source_if_exists "$HOME/.bashrc.d/mkv.sh"
 source_if_exists "$HOME/.bashrc.d/motd.sh"
 source_if_exists "$HOME/.bashrc.d/path.sh"
+source_if_exists "$HOME/.bashrc.d/progress.sh"
 source_if_exists "$HOME/.bashrc.d/ps1.sh"
 source_if_exists "$HOME/.bashrc.d/zip.sh"
 

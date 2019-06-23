@@ -10,6 +10,8 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
 
+  "go.useLanguageServer": true,
+
   "window.restoreWindows": "none",
   "window.titleBarStyle": "native",
 

@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# tar - an archiving utility
+
+# tar directory with arbitrary compression
 function zdir() {
   local input="$1"
   local output="$2"
@@ -24,6 +27,7 @@ function zdir() {
   return 3
 }
 
+# tar directory with gzip compression
 function gzdir() {
   local input="$1"
   local output="${2:-$(basename "$input").tar.gz}"
@@ -37,6 +41,7 @@ function gzdir() {
   zdir "$input" "$output" "$compressor"
 }
 
+# tar directory with xz compression
 function xzdir() {
   local input="$1"
   local output="${2:-$(basename "$input").tar.xz}"
@@ -44,6 +49,7 @@ function xzdir() {
   zdir "$input" "$output" "xz"
 }
 
+# untar and decompress file
 function untar() {
   local input="$1"
 

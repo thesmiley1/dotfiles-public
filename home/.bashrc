@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 # shellcheck disable=SC1090
 
 # If not running interactively, don't do anything
@@ -16,25 +17,14 @@ source_if_exists() {
 
 source_if_exists "/usr/share/bash-completion/bash_completion"
 
-source_if_exists "/usr/share/git/completion/git-prompt.sh" # arch location
+source_if_exists "/usr/share/git/completion/git-prompt.sh"
 
 source_if_exists "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source_if_exists "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 
 source_if_exists "$HOME/.rvm/scripts/rvm"
 
-source_if_exists "$HOME/.bashrc.d/alias.sh"
-source_if_exists "$HOME/.bashrc.d/env.sh"
-source_if_exists "$HOME/.bashrc.d/follow.sh"
-source_if_exists "$HOME/.bashrc.d/go.sh"
-source_if_exists "$HOME/.bashrc.d/gpg.sh"
-source_if_exists "$HOME/.bashrc.d/history.sh"
-source_if_exists "$HOME/.bashrc.d/lsx.sh"
-source_if_exists "$HOME/.bashrc.d/mkv.sh"
-source_if_exists "$HOME/.bashrc.d/motd.sh"
-source_if_exists "$HOME/.bashrc.d/path.sh"
-source_if_exists "$HOME/.bashrc.d/progress.sh"
-source_if_exists "$HOME/.bashrc.d/ps1.sh"
-source_if_exists "$HOME/.bashrc.d/zip.sh"
+source "$HOME/.bashrc.d/public.sh"
 
 source_if_exists "$HOME/.bashrc.d/work.sh"
+source_if_exists "$HOME/.bashrc.d/home.sh"

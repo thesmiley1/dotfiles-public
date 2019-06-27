@@ -68,6 +68,15 @@ if type -t htop > /dev/null; then
   alias top="htop"
 fi
 
+# npx
+#   npx - execute npm package binaries
+#
+# --no-install
+#   If passed to npx, it will only try to run <command> if it already exists in
+#   the current path or in $prefix/node_modules/.bin. It won't try to  install
+#   missing commands.
+alias npx="npx --no-install"
+
 # rm
 #   trash-put - Command line trash utility.
 if type -t trash-put > /dev/null; then

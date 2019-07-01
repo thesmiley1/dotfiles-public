@@ -83,12 +83,34 @@ if type -t trash-put > /dev/null; then
   alias rm="trash-put"
 fi
 
+# ssv
+#   vagrant - a tool for building and distributing development environments
+#
+# ssh
+#   connects to machine via SSH
 alias ssv="vagrant ssh"
 
+# vbox
+#   VBoxManage - Oracle VM VirtualBox Command Line Management Interface
 alias vbox="VBoxManage"
 
+# vh
+#   vagrant - a tool for building and distributing development environments
+#
+# halt
+#   stops the vagrant machine
 alias vh="vagrant halt"
 
+# vs
+#   vagrant - a tool for building and distributing development environments
+#
+# status
+#   outputs status of the vagrant machine
 alias vs="vagrant status"
 
+# vu
+#   vagrant - a tool for building and distributing development environments
+#
+# up
+#   starts and provisions the vagrant environment
 alias vu="vagrant up"

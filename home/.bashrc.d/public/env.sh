@@ -127,7 +127,11 @@ export PAGER="less"
 # target of a change directory command, MANPATH used by man(1) to find manua
 # pages, and so on)
 #
-# append GOBIN or GOPATH/bin to PATH
+# prepend $HOME/.local/bin to PATH if it exists
+if [[ -d "$HOME/.local/bin" ]]; then
+  PATH="$HOME/.local/bin:$PATH"
+fi
+# append GOBIN or GOPATH/bin to PATH if go is installed
 if type -t go > /dev/null; then
   if [[ -n $(go env GOBIN) ]]; then
     PATH="$PATH:$(go env GOBIN)"

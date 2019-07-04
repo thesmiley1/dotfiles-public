@@ -11,6 +11,9 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
 
+  "gitlab.enableExperimentalFeatures": true,
+  "gitlab.showPipelineUpdateNotifications": true,
+
   "go.useLanguageServer": true,
 
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",

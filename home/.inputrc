@@ -1,28 +1,56 @@
-# include system config
+# readline - get a line from a user with editing
+
+# $include
+#   This directive takes a single filename as an argument and reads commands and
+#   bindings from that file.
 $include /etc/inputrc
 
-# briefly move cursor to matching opening parenthesis
+# blink-matching-paren (Off)
+#   If set to On, readline attempts to briefly move the cursor to an opening
+#   parenthesis when a closing parenthesis is inserted.
 set blink-matching-paren On
 
-# display colored completion prefixes
+# colored-completion-prefix (Off)
+#   If set to On, when listing completions, readline displays the common prefix
+#   of the set of possible completions using a different color.  The color
+#   definitions are taken from the value of the LS_COLORS environment variable.
 set colored-completion-prefix On
 
-# display colored completions
+# colored-stats (Off)
+#   If set to On, readline displays possible completions using different colors
+#   to indicate their file type.  The color definitions are taken from the value
+#   of the LS_COLORS environment variable.
 set colored-stats On
 
-# display each completion on its own line
+# completion-display-width (-1)
+#   The number of screen columns used to display possible matches when
+#   performing completion.  The value is ignored if it is less than 0 or greater
+#   than the terminal screen width.  A value of 0 will cause matches to be
+#   displayed one per line.  The default value is -1.
 set completion-display-width 0
 
-# set case-insensitive completion
+# completion-ignore-case (Off)
+#   If set to On, readline performs filename matching and completion in a
+#   case-insensitive fashion.
 set completion-ignore-case On
 
-# treat underscore and hyphen as the same for completions
+# completion-map-case (Off)
+#   If set to On, and completion-ignore-case is enabled, readline treats hyphens
+#   (-) and underscores (_) as equivalent when performing case-insensitive
+#   filename matching and completion.
 set completion-map-case On
 
-# set vi editing mode
+# editing-mode (emacs)
+#   Controls whether readline begins with a set of key bindings similar to Emacs
+#   or vi.  editing-mode can be set to either emacs or vi.
 set editing-mode vi
 
-# prevent pasted characters from being interpreted as editing commands
+# enable-bracketed-paste (Off)
+#   When set to On, readline will configure the terminal in a way that will
+#   enable it to insert each paste into the editing buffer as a single string of
+#   characters, instead of treating each character as if it had been read from
+#   the keyboard.  This can prevent pasted characters from being interpreted as
+#   editing commands.
 set enable-bracketed-paste On
 
 # custom key mappings

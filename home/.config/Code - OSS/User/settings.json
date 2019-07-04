@@ -3,6 +3,7 @@
   "editor.renderFinalNewline": true,
   "editor.renderWhitespace": "all",
   "editor.rulers": [80],
+  "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
 
@@ -11,6 +12,8 @@
   "files.trimTrailingWhitespace": true,
 
   "go.useLanguageServer": true,
+
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
   "window.restoreWindows": "none",
   "window.titleBarStyle": "native",

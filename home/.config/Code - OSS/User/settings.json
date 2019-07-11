@@ -17,6 +17,7 @@
   "go.useLanguageServer": true,
 
   "terminal.external.linuxExec": "konsole",
+  "terminal.integrated.fontSize": 13,
 
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 

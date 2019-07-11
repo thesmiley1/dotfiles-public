@@ -1,21 +1,29 @@
 #! /usr/bin/env bash
 
+################################################################################
+
 # EDITOR
 #   environ - user environment
 #
 # The user's preferred utility to edit text files
+
 export EDITOR="vim"
+
+################################################################################
 
 # GPG_TTY
 #   gpg-agent - Secret key management for GnuPG
 #
 # It is important that this environment variable always reflects the output of
 # the tty command.
+
 if type -t gpg-connect-agent > /dev/null; then
   GPG_TTY=$(tty)
   export GPG_TTY
   gpg-connect-agent updatestartuptty /bye > /dev/null
 fi
+
+################################################################################
 
 # HISTCONTROL
 #   bash - GNU Bourne-Again SHell
@@ -32,7 +40,10 @@ fi
 # the value of HISTIGNORE.  The second and subsequent lines of a multi-line
 # compound command are not tested, and are added to the history regardless of
 # the value of HISTCONTROL.
+
 HISTCONTROL="ignoreboth"
+
+################################################################################
 
 # HISTFILESIZE
 #   bash - GNU Bourne-Again SHell
@@ -44,7 +55,10 @@ HISTCONTROL="ignoreboth"
 # the value is 0, the history file is truncated to zero size.  Non-numeric
 # values and numeric values less than zero inhibit truncation.  The shell sets
 # the default value to the value of HISTSIZE after reading any startup files.
+
 HISTFILESIZE="2000"
+
+################################################################################
 
 # HISTSIZE
 #   bash - GNU Bourne-Again SHell
@@ -54,7 +68,10 @@ HISTFILESIZE="2000"
 # values less than zero result in every command being saved on the history list
 # (there is no limit).  The shell sets the default value to 500 after reading
 # any startup files.
+
 HISTSIZE="1000"
+
+################################################################################
 
 # LESS
 #   less - opposite of more
@@ -88,7 +105,10 @@ HISTSIZE="1000"
 #   set at those positions, and then continue with the same spacing as the last
 #   two.  For example, -x9,17 will set tabs at positions 9, 17, 25, 33, etc.
 #   The default for n is 8.
+
 export LESS="--IGNORE-CASE --RAW-CONTROL-CHARS --tabs=2"
+
+################################################################################
 
 # LESSCOLORIZER
 #   lesspipe.sh - a filter for less
@@ -96,9 +116,12 @@ export LESS="--IGNORE-CASE --RAW-CONTROL-CHARS --tabs=2"
 # A different colorizer can be called within code2color by setting the ENV
 # variable LESSCOLORIZER to the name of an alternative (currently only
 # pygmentize allowed).
+
 if type -t pygmentize > /dev/null; then
   export LESSCOLORIZER="pygmentize"
 fi
+
+################################################################################
 
 # LESSOPEN
 #   less - opposite of more
@@ -106,9 +129,12 @@ fi
 # Command line to invoke the (optional) input-preprocessor.
 #
 # Source-highlight - convert source code to syntax highlighted document
+
 if type -t src-hilite-lesspipe.sh > /dev/null; then
   export LESSOPEN="| src-hilite-lesspipe.sh %s"
 fi
+
+################################################################################
 
 # PAGER
 #   environ - user environment
@@ -116,7 +142,10 @@ fi
 # The user's preferred utility to display text files
 #
 # less - opposite of more
+
 export PAGER="less"
+
+################################################################################
 
 # PATH
 #   environ - user environment
@@ -126,11 +155,12 @@ export PAGER="less"
 # separated by ':'.  (Similarly one has CDPATH used by some shells to find the
 # target of a change directory command, MANPATH used by man(1) to find manua
 # pages, and so on)
-#
+
 # prepend $HOME/.local/bin to PATH if it exists
 if [[ -d "$HOME/.local/bin" ]]; then
   PATH="$HOME/.local/bin:$PATH"
 fi
+
 # append GOBIN or GOPATH/bin to PATH if go is installed
 if type -t go > /dev/null; then
   if [[ -n $(go env GOBIN) ]]; then
@@ -140,45 +170,59 @@ if type -t go > /dev/null; then
   fi
 fi
 
+################################################################################
+
 # POWERLINE_BASH_CONTINUATION
 #   powerline - Powerline prompt and statusline script
 #
 # Tell powerline to set PS2 variable.
-#
+
 # shellcheck disable=2034
 POWERLINE_BASH_CONTINUATION=1
+
+################################################################################
 
 # POWERLINE_BASH_SELECT
 #   powerline - Powerline prompt and statusline script
 #
 # Tell powerline to set PS3 variable.
-#
+
 # shellcheck disable=2034
 POWERLINE_BASH_SELECT=1
+
+################################################################################
 
 # PS1
 #   bash - GNU Bourne-Again SHell
 #
 # The value of this parameter is expanded (see PROMPTING below) and used as the
 # primary prompt string.  The default value is ``\s-\v\$ ''.
+
 export PS1="\\[\\033[0;35m\\]\\u\\[\\033[0;37m\\]@\\[\\033[0;33m\\]\\h\\[\\033[0;37m\\]:\\[\\033[0;34m\\]\\w\\[\\033[0;32m\\]\$(__git_ps1 '(%s)')\\[\\033[0m\\]\\\$ "
+
+################################################################################
 
 # SSH_AUTH_SOCK
 #   ssh — OpenSSH SSH client (remote login program)
 #
 # Identifies the path of a UNIX-domain socket used to communicate with the
 # agent.
-#
+
 # set SSH_AUTH_SOCK to point to gpg-agent socket, if it exists
 if [[ -n "$XDG_RUNTIME_DIR" && -S "${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh" ]]; then
   export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
 fi
 
+################################################################################
+
 # VISUAL
 #   environ - user environment
 #
 # The user's preferred utility to edit text files
+
 export VISUAL="vim"
+
+################################################################################
 
 # XZ_OPT
 #   xz, unxz, xzcat, lzma, unlzma, lzcat - Compress or decompress .xz and .lzma
@@ -213,4 +257,7 @@ export VISUAL="vim"
 #   files that contain multiple blocks with size information in block headers.
 #   All files compressed in multi-threaded mode meet this condition, but files
 #   compressed in single-threaded mode don't even if --block-size=size is used.
+
 export XZ_OPT="--threads=0"
+
+################################################################################

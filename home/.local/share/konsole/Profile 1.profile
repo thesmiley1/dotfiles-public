@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=One Dark
-Font=Hack,9,-1,7,50,0,0,0,0,0,Regular
+Font=Hack,10,-1,5,50,0,0,0,0,0,Regular
 
 [General]
 LocalTabTitleFormat=(%u@%h) %n

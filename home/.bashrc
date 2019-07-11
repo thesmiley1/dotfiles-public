@@ -26,5 +26,7 @@ source_if_exists "$HOME/.rvm/scripts/rvm"
 
 source "$HOME/.bashrc.d/public.sh"
 
+source_if_exists "/usr/share/powerline/bindings/bash/powerline.sh"
+
 source_if_exists "$HOME/.bashrc.d/work.sh"
 source_if_exists "$HOME/.bashrc.d/home.sh"

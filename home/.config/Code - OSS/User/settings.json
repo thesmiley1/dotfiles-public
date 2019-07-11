@@ -16,6 +16,8 @@
 
   "go.useLanguageServer": true,
 
+  "terminal.external.linuxExec": "konsole",
+
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
   "window.restoreWindows": "none",

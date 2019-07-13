@@ -1,0 +1,9 @@
+{
+	"name": "Default",
+	"groups": {
+		"branch":                     { "fg": "gray9", "bg": "darkestcyan", "attrs": [] },
+		"branch_dirty":               { "fg": "brightyellow", "bg": "darkestcyan", "attrs": [] },
+		"branch_clean":               { "fg": "gray9", "bg": "darkestcyan", "attrs": [] },
+		"branch:divider":             { "fg": "gray7", "bg": "darkestcyan", "attrs": [] }
+	}
+}

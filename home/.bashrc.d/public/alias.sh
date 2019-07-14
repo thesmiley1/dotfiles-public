@@ -192,6 +192,24 @@ alias vh="vagrant halt"
 
 ################################################################################
 
+# vi - screen oriented (visual) display editor based on ex
+#   vim - Vi IMproved, a programmer's text editor
+
+if type -t vim > /dev/null; then
+  alias vi="vim"
+fi
+
+################################################################################
+
+# vim - Vi IMproved, a programmer's text editor
+#   neovim - hyperextensible Vim-based text editor
+
+if type -t nvim > /dev/null; then
+  alias vim="nvim"
+fi
+
+################################################################################
+
 # vs
 #   vagrant - a tool for building and distributing development environments
 #

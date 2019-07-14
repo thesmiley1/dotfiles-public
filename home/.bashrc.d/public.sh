@@ -4,6 +4,8 @@
 
 # shellcheck disable=SC1090
 
+source "$HOME/.bashrc.d/public/_editor.sh"
+
 source "$HOME/.bashrc.d/public/alias.sh"
 source "$HOME/.bashrc.d/public/env.sh"
 source "$HOME/.bashrc.d/public/follow.sh"

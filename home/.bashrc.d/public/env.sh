@@ -7,7 +7,8 @@
 #
 # The user's preferred utility to edit text files
 
-export EDITOR="vim"
+EDITOR="$(_editor)"
+export EDITOR
 
 ################################################################################
 
@@ -220,7 +221,8 @@ fi
 #
 # The user's preferred utility to edit text files
 
-export VISUAL="vim"
+VISUAL="$(_editor)"
+export VISUAL
 
 ################################################################################
 

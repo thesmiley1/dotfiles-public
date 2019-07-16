@@ -12,3 +12,6 @@ TerminalMargin=0
 [Interaction Options]
 MouseWheelZoomEnabled=false
 UnderlineFilesEnabled=true
+
+[Scrolling]
+HistorySize=10000

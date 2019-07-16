@@ -7,6 +7,7 @@ LocalTabTitleFormat=(%u@%h) %n
 Name=Profile 1
 Parent=FALLBACK/
 RemoteTabTitleFormat=(%u@%h) %c
+TerminalMargin=0
 
 [Interaction Options]
 MouseWheelZoomEnabled=false

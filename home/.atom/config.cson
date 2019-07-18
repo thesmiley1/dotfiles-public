@@ -5,10 +5,6 @@
       "exception-reporting"
     ]
     telemetryConsent: "no"
-    themes: [
-      "one-light-ui"
-      "one-light-syntax"
-    ]
   editor:
     showIndentGuide: true
     showInvisibles: true

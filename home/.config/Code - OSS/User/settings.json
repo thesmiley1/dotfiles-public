@@ -25,6 +25,8 @@
   "window.restoreWindows": "none",
   "window.titleBarStyle": "native",
 
+  "workbench.colorTheme": "Atom One Dark",
+
   "[python]": {
     "editor.tabSize": 4
   }

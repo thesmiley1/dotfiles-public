@@ -26,6 +26,11 @@
   "window.titleBarStyle": "native",
 
   "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorCustomizations": {
+    "editor.selectionHighlightBackground": "#ffffff1a",
+    "editor.selectionHighlightBorder":"#00000000",
+    "editorWhitespace.foreground": "#5C6370"
+  },
 
   "[python]": {
     "editor.tabSize": 4

@@ -352,26 +352,6 @@ fi
 
 ################################################################################
 
-# POWERLINE_BASH_CONTINUATION
-#   powerline - Powerline prompt and statusline script
-#
-# Tell powerline to set PS2 variable.
-
-# shellcheck disable=2034
-POWERLINE_BASH_CONTINUATION=1
-
-################################################################################
-
-# POWERLINE_BASH_SELECT
-#   powerline - Powerline prompt and statusline script
-#
-# Tell powerline to set PS3 variable.
-
-# shellcheck disable=2034
-POWERLINE_BASH_SELECT=1
-
-################################################################################
-
 # PS1
 #   bash - GNU Bourne-Again SHell
 #

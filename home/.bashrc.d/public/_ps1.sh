@@ -411,7 +411,9 @@ function _ps1() {
       SEGMENT_GIT="${SEGMENT_GIT}${CODE_FOREGROUND}${git_color_fg}"
 
       local git_status
-      git_status="${git_ps1#*${git_separator}}"
+      if [[ "${git_ps1}" == *"${git_separator}"* ]]; then
+        git_status="${git_ps1#*${git_separator}}"
+      fi
 
       if [[ -n "${git_status}" ]]; then
         SEGMENT_GIT="${SEGMENT_GIT}${CODE_BOLD}"

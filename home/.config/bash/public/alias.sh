@@ -123,15 +123,6 @@ alias ls="ls --all --color=always --human-readable -l"
 
 ################################################################################
 
-# top
-#   htop - interactive process viewer
-
-if type -t htop > /dev/null; then
-  alias top="htop"
-fi
-
-################################################################################
-
 # npx
 #   npx - execute npm package binaries
 #
@@ -172,6 +163,15 @@ fi
 #   connects to machine via SSH
 
 alias ssv="vagrant ssh"
+
+################################################################################
+
+# top
+#   htop - interactive process viewer
+
+if type -t htop > /dev/null; then
+  alias top="htop"
+fi
 
 ################################################################################
 

@@ -143,6 +143,13 @@ alias npx="npx --no-install"
 
 ################################################################################
 
+# nv
+#   neovim - hyperextensible Vim-based text editor
+
+alias nv="nvim"
+
+################################################################################
+
 # rm
 #   trash-put - Command line trash utility.
 #

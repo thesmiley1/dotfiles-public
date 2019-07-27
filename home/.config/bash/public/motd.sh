@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /usr/bin/env bash
 
 # display MOTD in non-login shells
 if [[ -f /etc/motd ]]; then

@@ -410,9 +410,20 @@ function __my_ps1() {
       SEGMENT_GIT="${SEGMENT_GIT}${GLYPH_DIVIDER_RIGHT_HARD}"
       SEGMENT_GIT="${SEGMENT_GIT}${CODE_FOREGROUND}${git_color_fg}"
 
+      local git_branch
+      git_branch="${git_ps1%${git_separator}*}"
+
       local git_status
       if [[ "${git_ps1}" == *"${git_separator}"* ]]; then
         git_status="${git_ps1#*${git_separator}}"
+      fi
+
+      if [[ "${git_ps1}" == *"|REBASE"* ]]; then
+        local temp="${git_ps1%*"|REBASE"*}"
+        if [[ "${temp}" == *"${git_separator}"* ]]; then
+          git_status="${temp#*${git_separator}}"
+        fi
+        git_branch="${git_branch}${git_ps1#*"${temp}"}"
       fi
 
       if [[ -n "${git_status}" ]]; then
@@ -430,9 +441,6 @@ function __my_ps1() {
       esac
 
       SEGMENT_GIT="${SEGMENT_GIT} ${git_icon}  "
-
-      local git_branch
-      git_branch="${git_ps1%${git_separator}*}"
 
       SEGMENT_GIT="${SEGMENT_GIT}${git_branch} "
 

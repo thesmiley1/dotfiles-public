@@ -24,7 +24,7 @@ source_if_exists "$HOME/.homesick/repos/homeshick/completions/homeshick-completi
 
 source_if_exists "$HOME/.rvm/scripts/rvm"
 
-source "$HOME/.bashrc.d/public.sh"
+source "${HOME}/.config/bash/public.sh"
 
-source_if_exists "$HOME/.bashrc.d/work.sh"
-source_if_exists "$HOME/.bashrc.d/home.sh"
+source_if_exists "${HOME}/.config/bash/work.sh"
+source_if_exists "${HOME}/.config/bash/home.sh"

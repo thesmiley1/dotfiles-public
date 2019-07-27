@@ -28,3 +28,5 @@ source "${HOME}/.config/bash/public.sh"
 
 source_if_exists "${HOME}/.config/bash/work.sh"
 source_if_exists "${HOME}/.config/bash/home.sh"
+
+true

@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-function _editor() {
+function __my_editor() {
   declare -a editors=(
     'nvim'
     'vim'

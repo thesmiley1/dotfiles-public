@@ -7,7 +7,7 @@
 #
 # The user's preferred utility to edit text files
 
-EDITOR="$(_editor)"
+EDITOR="$(__my_editor)"
 export EDITOR
 
 ################################################################################
@@ -340,14 +340,14 @@ fi
 #   BUG_REPORT_URL="https://bugzilla.redhat.com/"
 
 if [[ -e "/etc/os-release" ]]; then
-  __os_release="/etc/os-release"
+  __my_os_release="/etc/os-release"
 elif [[ -e "/usr/lib/os-release" ]]; then
-  __os_release="/usr/lib/os-release"
+  __my_os_release="/usr/lib/os-release"
 fi
-if [[ -n "${__os_release}" ]]; then
-  while read -r __os_release; do
-    eval "export OS_RELEASE_${__os_release}"
-  done < "${__os_release}"
+if [[ -n "${__my_os_release}" ]]; then
+  while read -r __my_os_release; do
+    eval "export __MY_OS_RELEASE_${__my_os_release}"
+  done < "${__my_os_release}"
 fi
 
 ################################################################################
@@ -394,7 +394,7 @@ fi
 # The value of this parameter is expanded (see PROMPTING below) and used as the
 # primary prompt string.  The default value is ``\s-\v\$ ''.
 
-export PS1="\$(_ps1)\n\\\$ "
+export PS1="\$(__my_ps1)\n\\\$ "
 
 ################################################################################
 
@@ -416,7 +416,7 @@ fi
 #
 # The user's preferred utility to edit text files
 
-VISUAL="$(_editor)"
+VISUAL="$(__my_editor)"
 export VISUAL
 
 ################################################################################

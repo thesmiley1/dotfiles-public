@@ -7,7 +7,7 @@
 # * https://github.com/justjanne/powerline-go
 # * https://github.com/bhilburn/powerlevel9k
 
-function _ps1() {
+function __my_ps1() {
   declare -r _PIPESTATUS=("${PIPESTATUS[@]}")
 
   ##############################################################################
@@ -199,10 +199,10 @@ function _ps1() {
 
   local hostname_icon_os
 
-  case "${OS_RELEASE_ID}" in
+  case "${__MY_OS_RELEASE_ID}" in
     "arch") hostname_icon_os="${ICON_ARCH}" ;;
     *     )
-      if [[ -n "${OS_RELEASE_ID}" ]]; then
+      if [[ -n "${__MY_OS_RELEASE_ID}" ]]; then
         hostname_icon_os="${ICON_PENGUIN_SMALL}"
       fi
       ;;

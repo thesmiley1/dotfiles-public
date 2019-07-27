@@ -5,7 +5,7 @@
 # ls with grep (cwd only)
 function lsg() {
   # shellcheck disable=SC2010
-  ls | grep -i "$@"
+  ls | grep -i "${@}"
 }
 
 # ls directories only

@@ -10,8 +10,8 @@ function __my_editor() {
   )
 
   for editor in "${editors[@]}"; do
-    if type -t "$editor" > /dev/null; then
-      printf "%s" "$editor"
+    if type -t "${editor}" > /dev/null; then
+      printf "%s" "${editor}"
       return 0
     fi
   done

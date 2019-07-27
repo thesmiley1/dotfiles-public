@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-# Source all files in "$HOME/.bashrc.d/public/".
+# Source all files in "${HOME}/.config/bash/public/".
 
 # shellcheck disable=SC1090
 

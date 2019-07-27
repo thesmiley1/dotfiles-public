@@ -4,22 +4,22 @@
 
 # tar directory with arbitrary compression
 function zdir() {
-  local input="$1"
-  local output="$2"
-  local compressor="$3"
+  local input="${1}"
+  local output="${2}"
+  local compressor="${3}"
 
-  if [[ -d "$input" ]]; then
-    if [[ -e "$output" ]]; then
-      echo "Output $output already exists"
+  if [[ -d "${input}" ]]; then
+    if [[ -e "${output}" ]]; then
+      echo "Output ${output} already exists"
       return 1
     else
-      tar -cv --use-compress-program="$compressor" -f "$output" "$input" &&
+      tar -cv --use-compress-program="${compressor}" -f "${output}" "${input}" &&
       echo &&
-      echo "$input archived to $output"
+      echo "${input} archived to ${output}"
       return 0
     fi
   else
-    echo "Input $input is not a directory"
+    echo "Input ${input} is not a directory"
     return 2
   fi
 
@@ -29,8 +29,8 @@ function zdir() {
 
 # tar directory with gzip compression
 function gzdir() {
-  local input="$1"
-  local output="${2:-$(basename "$input").tar.gz}"
+  local input="${1}"
+  local output="${2:-$(basename "${input}").tar.gz}"
 
   if type -t pigz > /dev/null; then
     local compressor="pigz"
@@ -38,31 +38,31 @@ function gzdir() {
     local compressor="gzip"
   fi
 
-  zdir "$input" "$output" "$compressor"
+  zdir "${input}" "${output}" "${compressor}"
 }
 
 # tar directory with xz compression
 function xzdir() {
-  local input="$1"
-  local output="${2:-$(basename "$input").tar.xz}"
+  local input="${1}"
+  local output="${2:-$(basename "${input}").tar.xz}"
 
-  zdir "$input" "$output" "xz"
+  zdir "${input}" "${output}" "xz"
 }
 
 # untar and decompress file
 function untar() {
-  local input="$1"
+  local input="${1}"
 
   local extension="${input#*.}"
-  if [[ "$extension" == "tar.gz" ]]; then
+  if [[ "${extension}" == "tar.gz" ]]; then
     if type -t pigz > /dev/null; then
-      tar -xv --use-compress-program="pigz" -f "$input"
+      tar -xv --use-compress-program="pigz" -f "${input}"
     else
-      tar -xv --use-compress-program="gzip" -f "$input"
+      tar -xv --use-compress-program="gzip" -f "${input}"
     fi
-  elif [[ "$extension" == "tar.xz" ]]; then
-    tar -xv --use-compress-program="xz" -f "$input"
+  elif [[ "${extension}" == "tar.xz" ]]; then
+    tar -xv --use-compress-program="xz" -f "${input}"
   else
-    tar -xvf "$input"
+    tar -xvf "${input}"
   fi
 }

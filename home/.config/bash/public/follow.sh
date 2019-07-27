@@ -3,9 +3,9 @@
 function follow() {
   local path="${1:-.}"
 
-  if realpath -e "$path" > /dev/null 2>&1; then
-    cd "$(realpath -e "$path")" || exit "$?"
+  if realpath -e "${path}" > /dev/null 2>&1; then
+    cd "$(realpath -e "${path}")" || exit "${?}"
   else
-    return "$?"
+    return "${?}"
   fi
 }

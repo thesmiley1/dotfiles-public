@@ -107,7 +107,7 @@ export PAGER="less"
 # agent.
 
 # set SSH_AUTH_SOCK to point to gpg-agent socket, if it exists
-if [[ -n "$XDG_RUNTIME_DIR" && -S "${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh" ]]; then
+if [[ -n "${XDG_RUNTIME_DIR}" && -S "${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh" ]]; then
   export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
 fi
 

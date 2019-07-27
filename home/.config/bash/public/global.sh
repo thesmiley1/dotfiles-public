@@ -98,16 +98,16 @@ HISTSIZE="1000"
 # pages, and so on)
 
 # prepend $HOME/.local/bin to PATH if it exists
-if [[ -d "$HOME/.local/bin" ]]; then
-  PATH="$HOME/.local/bin:$PATH"
+if [[ -d "${HOME}/.local/bin" ]]; then
+  PATH="${HOME}/.local/bin:$PATH"
 fi
 
 # append GOBIN or GOPATH/bin to PATH if go is installed
 if type -t go > /dev/null; then
   if [[ -n $(go env GOBIN) ]]; then
-    PATH="$PATH:$(go env GOBIN)"
+    PATH="${PATH}:$(go env GOBIN)"
   else
-    PATH="$PATH:$(go env GOPATH)/bin"
+    PATH="${PATH}:$(go env GOPATH)/bin"
   fi
 fi
 

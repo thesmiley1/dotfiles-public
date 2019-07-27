@@ -5,7 +5,7 @@
 # run an arbitrary command with progress
 function cmdprog() {
   # shellcheck disable=SC2034
-  local cmd="$1"
+  local cmd="${1}"
   shift
 
   eval \"\$cmd\" \"\$@\" \&
@@ -18,10 +18,10 @@ function cmdprog() {
 
 # cp with progress
 function cpprog() {
-  cmdprog cp "$@"
+  cmdprog cp "${@}"
 }
 
 # mv with progress
 function mvprog() {
-  mvprog mv "$@"
+  mvprog mv "${@}"
 }

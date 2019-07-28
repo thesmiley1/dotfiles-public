@@ -6,7 +6,7 @@
 	rebase = true
 [core]
 	pager = less -F -x1,3
-	excludesFile = ~/.gitignore
+	excludesFile = ~/.config/git/ignore
 [commit]
 	gpgsign = true
 [user]

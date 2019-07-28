@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-source_if_exists() {
+function source_if_exists() {
   if [[ -s "${1}" ]]
   then
     source "${1}"

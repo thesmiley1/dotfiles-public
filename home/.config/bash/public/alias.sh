@@ -96,6 +96,13 @@ alias ffprobe="ffprobe -hide_banner"
 
 ################################################################################
 
+# g
+#   git - the stupid content tracker
+
+alias g="git"
+
+################################################################################
+
 # grep
 #   grep, egrep, fgrep - print lines that match patterns
 #

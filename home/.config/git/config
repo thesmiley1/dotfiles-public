@@ -11,3 +11,6 @@
 	gpgsign = true
 [user]
 	signingkey = 61D4254BB506AB28
+[alias]
+	d = diff
+	s = status

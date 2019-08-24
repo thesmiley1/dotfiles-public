@@ -8,6 +8,7 @@ source "${HOME}/.config/bash/public/_editor.sh"
 source "${HOME}/.config/bash/public/_ps1.sh"
 
 source "${HOME}/.config/bash/public/alias.sh"
+source "${HOME}/.config/bash/public/alias_completion.sh"
 source "${HOME}/.config/bash/public/env.sh"
 source "${HOME}/.config/bash/public/follow.sh"
 source "${HOME}/.config/bash/public/global.sh"

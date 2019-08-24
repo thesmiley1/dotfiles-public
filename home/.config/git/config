@@ -12,5 +12,9 @@
 [user]
 	signingkey = 61D4254BB506AB28
 [alias]
+	a = add
+	b = branch
 	d = diff
+	f = fetch
+	p = push
 	s = status

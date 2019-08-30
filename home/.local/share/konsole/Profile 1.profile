@@ -3,10 +3,10 @@ ColorScheme=One Dark
 Font=Hack Nerd Font,10,-1,5,50,0,0,0,0,0,Regular
 
 [General]
-LocalTabTitleFormat=(%u@%h) %n
+LocalTabTitleFormat=%w
 Name=Profile 1
 Parent=FALLBACK/
-RemoteTabTitleFormat=(%u@%h) %c
+RemoteTabTitleFormat=%w
 TerminalMargin=0
 
 [Interaction Options]

@@ -20,6 +20,20 @@
 
   "terminal.external.linuxExec": "konsole",
 
+  "todohighlight.isEnable": true,
+  "todohighlight.keywords": [
+    {
+      "color": "#282c34",
+      "backgroundColor": "#61afef",
+      "text": "NOTE:"
+    },
+    {
+      "color": "#282c34",
+      "backgroundColor": "#56b6c2",
+      "text": "THANKS:"
+    }
+  ],
+
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
   "window.restoreWindows": "none",
@@ -34,5 +48,9 @@
 
   "[python]": {
     "editor.tabSize": 4
-  }
+  },
+  "go.testOnSave": true,
+  "go.lintTool": "golangci-lint",
+  "workbench.sideBar.location": "left",
+  "rust-client.rustupPath": "/home/john/.cargo/bin/rustup"
 }

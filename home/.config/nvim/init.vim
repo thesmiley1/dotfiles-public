@@ -151,6 +151,19 @@ set colorcolumn=81
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" 'cursorline' 'cul' 'nocursorline' 'nocul'
+"   boolean  (default off)
+"   local to window
+"
+" Highlight the screen line of the cursor with CursorLine |hl-CursorLine|.
+" Useful to easily spot the cursor.  Will make screen redrawing slower.  When
+" Visual mode is active the highlighting isn't used to make it easier to see
+" the selected text.
+
+set cursorline
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " 'expandtab' 'et'
 "   boolean (default off)
 "   local to buffer

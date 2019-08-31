@@ -106,6 +106,30 @@ syntax on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" 'clipboard' 'cb'
+"   string  (default "")
+"   global
+"
+" This option is a list of comma separated names.  These names are recognized:
+"
+" *clipboard-unnamed*  unnamed
+"   When included, Vim will use the clipboard register '*' for all yank, delete,
+"   change and put operations which would normally go to the unnamed register.
+"   When a register is explicitly specified, it will always be used regardless
+"   of whether "unnamed" is in 'clipboard' or not.  The clipboard register can
+"   always be explicitly accessed using the "* notation.  Also see |clipboard|.
+"
+" *clipboard-unnamedplus*  unnamedplus
+"   A variant of the "unnamed" flag which uses the clipboard register '+'
+"   (|quoteplus|) instead of register '*' for all yank, delete, change and put
+"   operations which would normally go to the unnamed register.  When "unnamed"
+"   is also included to the option, yank and delete operations (but not put)
+"   will additionally copy the text into register '*'.  See |clipboard|.
+
+set clipboard=unnamedplus
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " 'colorcolumn' 'cc'
 "   string  (default "")
 "   local to window

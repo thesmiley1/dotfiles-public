@@ -267,6 +267,66 @@ set listchars=eol:¬,tab:»-,trail:~,extends:>,precedes:<,space:·
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" 'mouse'
+"   string  (default "")
+"   global
+"
+" Enables mouse support. For example, to enable the mouse in Normal mode and
+" Visual mode: >
+"   :set mouse=nv
+"
+" To temporarily disable mouse support, hold the shift key while using the
+" mouse.
+"
+" Mouse support can be enabled for different modes:
+"   n  Normal mode
+"   v  Visual mode
+"   i  Insert mode
+"   c  Command-line mode
+"   h  all previous modes when editing a help file
+"   a  all previous modes
+"   r  for |hit-enter| and |more-prompt| prompt
+"
+" Left-click anywhere in a text buffer to place the cursor there.  This works
+" with operators too, e.g. type |d| then left-click to delete text from the
+" current cursor position to the position where you clicked.
+"
+" Drag the |status-line| or vertical separator of a window to resize it.
+"
+" If enabled for "v" (Visual mode) then double-click selects word-wise,
+" triple-click makes it line-wise, and quadruple-click makes it rectangular
+" block-wise.
+"
+" For scrolling with a mouse wheel see |scroll-mouse-wheel|.
+"
+" Note: When enabling the mouse in a terminal, copy/paste will use the
+" "* register if possible. See also 'clipboard'.
+"
+" Related options:
+"   'mousefocus'  window focus follows mouse pointer
+"   'mousemodel'  what mouse button does which action
+"   'mousehide'   hide mouse pointer while typing text
+"   'selectmode'  whether to start Select mode or Visual mode
+"
+" The :behave command provides some "profiles" for mouse behavior.
+"   *:behave* *:be*
+"
+" :be[have] {model}  Set behavior for mouse and selection.  Valid arguments are:
+"   mswin  MS-Windows behavior
+"   xterm  Xterm behavior
+"
+" Using ":behave" changes these options:
+"
+"   option        mswin               xterm
+"   'selectmode'  "mouse,key"         ""
+"   'mousemodel'  "popup"             "extend"
+"   'keymodel'    "startsel,stopsel"  ""
+"   'selection'   "exclusive"         "inclusive"
+
+set mouse=a
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " 'smartcase' 'scs'
 "   boolean (default off)
 "   global

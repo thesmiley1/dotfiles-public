@@ -90,7 +90,7 @@ endif
 " autocommand event is triggered.  For info about writing a colorscheme file:
 "   :edit $VIMRUNTIME/colors/README.txt
 
-colorscheme onedark
+silent! colorscheme onedark
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

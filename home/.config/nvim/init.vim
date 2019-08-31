@@ -327,6 +327,35 @@ set mouse=a
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" 'number' 'nu'
+"   boolean  (default off)
+"   local to window
+"
+" Print the line number in front of each line.  When the 'n' option is excluded
+" from 'cpoptions' a wrapped line will not use the column of line numbers.
+" Use the 'numberwidth' option to adjust the room for the line number.
+" When a long, wrapped line doesn't start with the first character, '-'
+" characters are put before the number.
+" For highlighting see |hl-LineNr|, |hl-CursorLineNr|, and the |:sign-define|
+" "numhl" argument.
+"
+"   *number_relativenumber*
+" The 'relativenumber' option changes the displayed number to be relative to
+" the cursor.  Together with 'number' there are these four combinations (cursor
+" in line 3):
+"
+"   'nonu'          'nu'            'nonu'          'nu'
+"   'nornu'         'nornu'         'rnu'           'rnu'
+"
+"   |apple          |  1 apple      |  2 apple      |  2 apple
+"   |pear           |  2 pear       |  1 pear       |  1 pear
+"   |nobody         |  3 nobody     |  0 nobody     |3   nobody
+"   |there          |  4 there      |  1 there      |  1 there
+
+set number
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " 'smartcase' 'scs'
 "   boolean (default off)
 "   global

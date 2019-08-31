@@ -33,40 +33,38 @@ let g:airline_powerline_fonts=1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if filereadable(expand('~/.local/share/nvim/site/autoload/plug.vim'))
-  call plug#begin('~/.local/share/nvim/plugged')
+" :pa[ckadd][!] {name}
+"
+" Search for an optional plugin directory in 'packpath' and source any plugin
+" files found.  The directory must match:
+"   pack/*/opt/{name} ~
+"
+" The directory is added to 'runtimepath' if it wasn't there yet.  If the
+" directory pack/*/opt/{name}/after exists it is added at the end of
+" 'runtimepath'.
+"
+" If loading packages from "pack/*/start" was skipped, then this directory is
+" searched first:
+"   pack/*/start/{name} ~
+"
+" Note that {name} is the directory name, not the name of the .vim file.  All
+" the files matching the pattern
+"   pack/*/opt/{name}/plugin/**/*.vim ~
+" will be sourced.  This allows for using subdirectories below "plugin", just
+" like with plugins in 'runtimepath'.
+"
+" If the filetype detection was not enabled yet (this is usually done with a
+" "syntax enable" or "filetype on" command in your .vimrc file), this will also
+" look for "{name}/ftdetect/*.vim" files.
+"
+" When the optional ! is added no plugin files or ftdetect scripts are loaded,
+" only the matching directories are added to 'runtimepath'.  This is useful in
+" your .vimrc.  The plugins will then be loaded during initialization, see
+" |load-plugins|.
+"
+" Also see |pack-add|.
 
-  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-  " onedark.vim
-  "   A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme
-  "
-  " https://github.com/joshdick/onedark.vim
-
-  Plug 'joshdick/onedark.vim'
-
-  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-  " vim-airline
-  "   lean & mean status/tabline for vim that's light as air
-  "
-  " https://github.com/vim-airline/vim-airline
-
-  Plug 'vim-airline/vim-airline'
-
-  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-  " vim-polyglot
-  "   A solid language pack for Vim
-  "
-  " https://github.com/sheerun/vim-polyglot
-
-  Plug 'sheerun/vim-polyglot'
-
-  """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-  call plug#end()
-endif
+packadd! onedark.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -90,7 +88,7 @@ endif
 " autocommand event is triggered.  For info about writing a colorscheme file:
 "   :edit $VIMRUNTIME/colors/README.txt
 
-silent! colorscheme onedark
+colorscheme onedark
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

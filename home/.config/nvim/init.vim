@@ -4,6 +4,33 @@
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+"vim-better-whitespace
+
+" Better whitespace highlighting for vim
+
+" set a custom highlight cterm color
+let g:better_whitespace_ctermbg=196
+
+" enable highlighting
+let g:better_whitespace_enabled=1
+
+" set a custom highlight gui color
+let g:better_whitespace_guicolor="#BE5046"
+
+" highlight space characters that appear before or in-between tabs
+let g:show_spaces_that_precede_tabs=1
+
+" strip white lines at the end of the file when stripping whitespace
+let g:strip_whitelines_at_eof=1
+
+" disable asking for confirmation before stripping whitespace when file is saved
+let g:strip_whitespace_confirm=0
+
+" strip whitespace on save
+let g:strip_whitespace_on_save=1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " onedark.vim
 
 " Global color overrides

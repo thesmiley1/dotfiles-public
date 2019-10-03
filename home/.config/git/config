@@ -10,7 +10,7 @@
 [commit]
 	gpgsign = true
 [user]
-	signingkey = 61D4254BB506AB28
+	signingkey = 4FFCB9D3DF761225031B227822839C1B3685D4E3
 [alias]
 	a = add
 	b = branch

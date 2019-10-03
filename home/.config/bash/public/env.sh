@@ -12,6 +12,16 @@ export EDITOR
 
 ################################################################################
 
+# GNUPGHOME
+#   gpg - OpenPGP encryption and signing tool
+#
+# If set directory used instead of "~/.gnupg".
+
+GNUPGHOME="${HOME}/.gnupg"
+export GNUPGHOME
+
+################################################################################
+
 # GPG_TTY
 #   gpg-agent - Secret key management for GnuPG
 #
@@ -109,6 +119,8 @@ export PAGER="less"
 # set SSH_AUTH_SOCK to point to gpg-agent socket, if it exists
 if [[ -n "${XDG_RUNTIME_DIR}" && -S "${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh" ]]; then
   export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
+elif [[ -S "${GNUPGHOME}/S.gpg-agent.ssh" ]]; then
+  export SSH_AUTH_SOCK="${GNUPGHOME}/S.gpg-agent.ssh"
 fi
 
 ################################################################################

@@ -16,6 +16,8 @@
   "gitlab.enableExperimentalFeatures": true,
   "gitlab.showPipelineUpdateNotifications": true,
 
+  "go.lintTool": "golangci-lint",
+  "go.testOnSave": true,
   "go.useLanguageServer": true,
 
   "terminal.external.linuxExec": "konsole",
@@ -49,8 +51,6 @@
   "[python]": {
     "editor.tabSize": 4
   },
-  "go.testOnSave": true,
-  "go.lintTool": "golangci-lint",
   "workbench.sideBar.location": "left",
   "rust-client.rustupPath": "/home/john/.cargo/bin/rustup",
   "markdown.extension.toc.unorderedList.marker": "*"

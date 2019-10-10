@@ -11,6 +11,8 @@
 	gpgsign = true
 [user]
 	signingkey = 4FFCB9D3DF761225031B227822839C1B3685D4E3
+	email = john@schroedernet.software
+	name = John Schroeder
 [alias]
 	a = add
 	b = branch

@@ -20,6 +20,8 @@
   "go.testOnSave": true,
   "go.useLanguageServer": true,
 
+  "markdown.extension.toc.unorderedList.marker": "*",
+
   "rust-client.rustupPath": "/home/john/.cargo/bin/rustup",
 
   "terminal.external.linuxExec": "konsole",
@@ -53,6 +55,5 @@
 
   "[python]": {
     "editor.tabSize": 4
-  },
-  "markdown.extension.toc.unorderedList.marker": "*"
+  }
 }

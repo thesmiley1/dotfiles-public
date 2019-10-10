@@ -47,11 +47,11 @@
     "editor.selectionHighlightBorder":"#00000000",
     "editorWhitespace.foreground": "#5C6370"
   },
+  "workbench.sideBar.location": "left",
 
   "[python]": {
     "editor.tabSize": 4
   },
-  "workbench.sideBar.location": "left",
   "rust-client.rustupPath": "/home/john/.cargo/bin/rustup",
   "markdown.extension.toc.unorderedList.marker": "*"
 }

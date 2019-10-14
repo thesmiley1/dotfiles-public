@@ -1,6 +1,7 @@
 [alias]
 	a = add
 	b = branch
+	ch = checkout
 	d = diff
 	f = fetch
 	l = log

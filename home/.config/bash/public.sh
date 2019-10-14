@@ -4,7 +4,6 @@
 
 # shellcheck disable=SC1090
 
-source "${HOME}/.config/bash/public/_editor.sh"
 source "${HOME}/.config/bash/public/_ps1.sh"
 
 source "${HOME}/.config/bash/public/alias.sh"

@@ -2,12 +2,35 @@
 
 ################################################################################
 
+# HELPER SETUP
+
+function __editor() {
+  declare -a editors=(
+    'nvim'
+    'vim'
+    'vi'
+    'nano'
+    'emacs'
+  )
+
+  for editor in "${editors[@]}"; do
+    if type -t "${editor}" > /dev/null; then
+      printf "%s" "${editor}"
+      return 0
+    fi
+  done
+
+  return 1
+}
+
+################################################################################
+
 # EDITOR
 #   environ - user environment
 #
 # The user's preferred utility to edit text files
 
-EDITOR="$(__my_editor)"
+EDITOR="$(__editor)"
 export EDITOR
 
 ################################################################################
@@ -130,7 +153,7 @@ fi
 #
 # The user's preferred utility to edit text files
 
-VISUAL="$(__my_editor)"
+VISUAL="$(__editor)"
 export VISUAL
 
 ################################################################################
@@ -170,5 +193,11 @@ export VISUAL
 #   compressed in single-threaded mode don't even if --block-size=size is used.
 
 export XZ_OPT="--threads=0"
+
+################################################################################
+
+# HELPER TEARDOWN
+
+unset __editor
 
 ################################################################################

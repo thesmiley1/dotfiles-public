@@ -3,6 +3,7 @@
 	b = branch
 	d = diff
 	f = fetch
+	l = log
 	p = push
 	s = status
 [commit]

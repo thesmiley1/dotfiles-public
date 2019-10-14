@@ -19,8 +19,6 @@
   "linter-shellcheck":
     enableNotice: true
   "linter-ui-default": {}
-  welcome:
-    showOnStartup: false
 ".go.source":
   editor:
     tabType: "hard"

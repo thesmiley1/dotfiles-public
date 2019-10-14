@@ -1,18 +1,3 @@
-[fetch]
-	prune = true
-[log]
-	showSignature = true
-[pull]
-	rebase = true
-[core]
-	pager = less -F -x1,3
-	excludesFile = ~/.config/git/ignore
-[commit]
-	gpgsign = true
-[user]
-	signingkey = 4FFCB9D3DF761225031B227822839C1B3685D4E3
-	email = john@schroedernet.software
-	name = John Schroeder
 [alias]
 	a = add
 	b = branch
@@ -20,3 +5,18 @@
 	f = fetch
 	p = push
 	s = status
+[commit]
+	gpgsign = true
+[core]
+	excludesFile = ~/.config/git/ignore
+	pager = less -F -x1,3
+[fetch]
+	prune = true
+[log]
+	showSignature = true
+[pull]
+	rebase = true
+[user]
+	email = john@schroedernet.software
+	name = John Schroeder
+	signingkey = 4FFCB9D3DF761225031B227822839C1B3685D4E3

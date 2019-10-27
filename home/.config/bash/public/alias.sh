@@ -115,7 +115,7 @@ alias g="git"
 #   supported, but its setting does not have priority.  WHEN is never, always,
 #   or auto.
 
-alias grep="grep --color=auto"
+alias grep="grep --color=auto --ignore-case"
 
 ################################################################################
 

@@ -13,7 +13,7 @@ function lsg() {
   fi
 
   # shellcheck disable=SC2010
-  ls "${dir}"| grep -i "${@}"
+  ls "${dir}"| grep "${@}"
 }
 
 # ls directories only

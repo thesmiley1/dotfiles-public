@@ -218,7 +218,9 @@ alias vh="vagrant halt"
 # vi - screen oriented (visual) display editor based on ex
 #   vim - Vi IMproved, a programmer's text editor
 
-if type -t vim > /dev/null; then
+if type -t nvim > /dev/null; then
+  alias vi="nvim"
+elif type -t vim > /dev/null; then
   alias vi="vim"
 fi
 

@@ -3,15 +3,15 @@
 # tar - an archiving utility
 
 # tar directory with arbitrary compression
-function zdir() {
+function ztar() {
   local input="${1}"
   local output="${2}"
   local compressor="${3}"
 
-  if [[ -d "${input}" ]]; then
+  if [[ -e "${input}" ]]; then
     if [[ -e "${output}" ]]; then
       echo "Output ${output} already exists"
-      return 1
+      return 2
     else
       tar -cv --use-compress-program="${compressor}" -f "${output}" "${input}" &&
       echo &&
@@ -19,8 +19,8 @@ function zdir() {
       return 0
     fi
   else
-    echo "Input ${input} is not a directory"
-    return 2
+    echo "Input ${input} does not exist"
+    return 1
   fi
 
   # should never get here
@@ -28,7 +28,7 @@ function zdir() {
 }
 
 # tar directory with gzip compression
-function gzdir() {
+function targz() {
   local input="${1}"
   local output="${2:-$(basename "${input}").tar.gz}"
 
@@ -38,15 +38,29 @@ function gzdir() {
     local compressor="gzip"
   fi
 
-  zdir "${input}" "${output}" "${compressor}"
+  ztar "${input}" "${output}" "${compressor}"
 }
 
 # tar directory with xz compression
-function xzdir() {
+function tarxz() {
   local input="${1}"
   local output="${2:-$(basename "${input}").tar.xz}"
 
-  zdir "${input}" "${output}" "xz"
+  if type -t pixz > /dev/null; then
+    local compressor="pixz"
+  else
+    local compressor="xz"
+  fi
+
+  ztar "${input}" "${output}" "${compressor}"
+}
+
+# tar directory with zst compression
+function tarzst() {
+  local input="${1}"
+  local output="${2:-$(basename "${input}").tar.zst}"
+
+  ztar "${input}" "${output}" "zstd"
 }
 
 # untar and decompress file
@@ -61,7 +75,11 @@ function untar() {
       tar -xv --use-compress-program="gzip" -f "${input}"
     fi
   elif [[ "${extension}" == "tar.xz" ]]; then
-    tar -xv --use-compress-program="xz" -f "${input}"
+    if type -t pixz > /dev/null; then
+      tar -xv --use-compress-program="pixz" -f "${input}"
+    else
+      tar -xv --use-compress-program="xz" -f "${input}"
+    fi
   else
     tar -xvf "${input}"
   fi

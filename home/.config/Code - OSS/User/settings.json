@@ -16,6 +16,9 @@
   "gitlab.enableExperimentalFeatures": true,
   "gitlab.showPipelineUpdateNotifications": true,
 
+  "go.lintFlags": [
+    "--fast"
+  ],
   "go.lintTool": "golangci-lint",
   "go.testOnSave": true,
   "go.useLanguageServer": true,

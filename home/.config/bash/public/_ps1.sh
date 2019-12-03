@@ -116,6 +116,11 @@ function __my_ps1() {
   declare -r            ICON_VIDEO="\uF008" # 
   declare -r           ICON_WRENCH="\uF0AD" # 
 
+  local ICON_SPACE=" "
+  if [[ "${COLORTERM}" == "kmscon" ]]; then
+    ICON_SPACE=""
+  fi
+
   ##############################################################################
   #                                                                            #
   #                                  Segments                                  #
@@ -142,8 +147,8 @@ function __my_ps1() {
   local date_time
   date_time="${date_out#* }"
 
-  SEGMENT_DATE="${SEGMENT_DATE}${ICON_CALENDAR} ${date_date}"
-  SEGMENT_DATE="${SEGMENT_DATE} ${ICON_CLOCK} ${date_time}"
+  SEGMENT_DATE="${SEGMENT_DATE}${ICON_CALENDAR}${ICON_SPACE}${date_date}"
+  SEGMENT_DATE="${SEGMENT_DATE} ${ICON_CLOCK}${ICON_SPACE}${date_time}"
   SEGMENT_DATE="${SEGMENT_DATE} "
 
   ################################ User Segment ################################
@@ -168,7 +173,7 @@ function __my_ps1() {
     SEGMENT_USER="${SEGMENT_USER}${user_icon_regular}"
   fi
 
-  SEGMENT_USER="${SEGMENT_USER} ${USER}${CODE_REGULAR}"
+  SEGMENT_USER="${SEGMENT_USER}${ICON_SPACE}${USER}${CODE_REGULAR}"
   SEGMENT_USER="${SEGMENT_USER} "
 
   ############################## Hostname Segment ##############################
@@ -192,7 +197,7 @@ function __my_ps1() {
   else
     SEGMENT_HOSTNAME="${SEGMENT_HOSTNAME}${hostname_icon_local}"
   fi
-  SEGMENT_HOSTNAME="${SEGMENT_HOSTNAME}  "
+  SEGMENT_HOSTNAME="${SEGMENT_HOSTNAME}${ICON_SPACE} "
 
   SEGMENT_HOSTNAME="${SEGMENT_HOSTNAME}${HOSTNAME}${CODE_REGULAR}"
   SEGMENT_HOSTNAME="${SEGMENT_HOSTNAME} "
@@ -209,7 +214,7 @@ function __my_ps1() {
   esac
 
   if [[ -n "${hostname_icon_os}" ]]; then
-    SEGMENT_HOSTNAME="${SEGMENT_HOSTNAME}${hostname_icon_os} "
+    SEGMENT_HOSTNAME="${SEGMENT_HOSTNAME}${hostname_icon_os}${ICON_SPACE}"
   fi
 
   ################################ PWD Segment #################################
@@ -369,7 +374,7 @@ function __my_ps1() {
       ;;
   esac
 
-  SEGMENT_PWD="${SEGMENT_PWD} ${pwd_icon}  ${GLYPH_DIVIDER_RIGHT_SOFT}"
+  SEGMENT_PWD="${SEGMENT_PWD} ${pwd_icon}${ICON_SPACE} ${GLYPH_DIVIDER_RIGHT_SOFT}"
 
   local pwd="${PWD}"
   pwd="${pwd/${HOME}/\~}"
@@ -440,7 +445,7 @@ function __my_ps1() {
         *       ) git_icon="${ICON_GIT_FILL}"     ;;
       esac
 
-      SEGMENT_GIT="${SEGMENT_GIT} ${git_icon}  "
+      SEGMENT_GIT="${SEGMENT_GIT} ${git_icon}${ICON_SPACE} "
 
       SEGMENT_GIT="${SEGMENT_GIT}${git_branch} "
 
@@ -448,10 +453,10 @@ function __my_ps1() {
         local symbol="${git_status:0:1}"
 
         case "${symbol}" in
-          "*" ) SEGMENT_GIT="${SEGMENT_GIT}${ICON_PENCIL} "        ;;
-          "+" ) SEGMENT_GIT="${SEGMENT_GIT}${ICON_CHECKMARK} "     ;;
-          "\$") SEGMENT_GIT="${SEGMENT_GIT}${ICON_FLAG} "          ;;
-          "%" ) SEGMENT_GIT="${SEGMENT_GIT}${ICON_QUESTION_MARK} " ;;
+          "*" ) SEGMENT_GIT="${SEGMENT_GIT}${ICON_PENCIL}${ICON_SPACE}"        ;;
+          "+" ) SEGMENT_GIT="${SEGMENT_GIT}${ICON_CHECKMARK}${ICON_SPACE}"     ;;
+          "\$") SEGMENT_GIT="${SEGMENT_GIT}${ICON_FLAG}${ICON_SPACE}"          ;;
+          "%" ) SEGMENT_GIT="${SEGMENT_GIT}${ICON_QUESTION_MARK}${ICON_SPACE}" ;;
         esac
 
         git_status="${git_status:1:${#git_status}}"

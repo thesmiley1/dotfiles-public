@@ -71,7 +71,7 @@ HISTCONTROL="ignoreboth"
 # values and numeric values less than zero inhibit truncation.  The shell sets
 # the default value to the value of HISTSIZE after reading any startup files.
 
-HISTFILESIZE="2000"
+HISTFILESIZE="1000"
 
 ################################################################################
 

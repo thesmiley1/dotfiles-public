@@ -24,10 +24,6 @@ shopt -s dirspell
 # explicitly, even if dotglob is set.
 shopt -s dotglob
 
-# If set, patterns which fail to match filenames during pathname expansion
-# result in an expansion error.
-shopt -s failglob
-
 # If set, the pattern ** used in a pathname expansion context will match all
 # files and zero or more directories and subdirectories.  If the pattern is
 # followed by a /, only directories and subdirectories match.

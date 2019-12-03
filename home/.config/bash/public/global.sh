@@ -290,12 +290,13 @@ PS1="\$(__my_ps1)\n\\\$ "
 #   BUG_REPORT_URL="https://bugzilla.redhat.com/"
 
 if [[ -e "/etc/os-release" ]]; then
-  __my_os_release="/etc/os-release"
+  _os_release="/etc/os-release"
 elif [[ -e "/usr/lib/os-release" ]]; then
-  __my_os_release="/usr/lib/os-release"
+  _os_release="/usr/lib/os-release"
 fi
-if [[ -n "${__my_os_release}" ]]; then
-  while read -r __my_os_release; do
-    eval "__MY_OS_RELEASE_${__my_os_release}"
-  done < "${__my_os_release}"
+if [[ -n "${_os_release}" ]]; then
+  while read -r _os_release; do
+    eval "OS_RELEASE_${_os_release}"
+  done < "${_os_release}"
 fi
+unset _os_release

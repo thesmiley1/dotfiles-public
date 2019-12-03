@@ -199,10 +199,10 @@ function __my_ps1() {
 
   local hostname_icon_os
 
-  case "${__MY_OS_RELEASE_ID}" in
+  case "${OS_RELEASE_ID}" in
     "arch") hostname_icon_os="${ICON_ARCH}" ;;
     *     )
-      if [[ -n "${__MY_OS_RELEASE_ID}" ]]; then
+      if [[ -n "${OS_RELEASE_ID}" ]]; then
         hostname_icon_os="${ICON_PENGUIN_SMALL}"
       fi
       ;;

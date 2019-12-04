@@ -10,6 +10,7 @@
 	p = push
 	s = status
 	ss = status --short
+	st = stash
 [commit]
 	gpgsign = true
 [core]

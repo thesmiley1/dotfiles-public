@@ -2,6 +2,8 @@
 	a = add
 	b = branch
 	ch = checkout
+	cl = clone
+	co = commit
 	d = diff
 	f = fetch
 	l = log --stat

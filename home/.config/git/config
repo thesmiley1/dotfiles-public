@@ -19,8 +19,10 @@
 	prune = true
 [log]
 	showSignature = true
+[merge]
+	ff = only
 [pull]
-	rebase = true
+	ff = only
 [user]
 	email = john@schroedernet.software
 	name = John Schroeder

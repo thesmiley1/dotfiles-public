@@ -4,7 +4,7 @@
 	ch = checkout
 	d = diff
 	f = fetch
-	l = log
+	l = log --stat
 	p = push
 	s = status
 [commit]

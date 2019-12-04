@@ -2,7 +2,7 @@
 
 # ls - list directory contents
 
-# ls with grep (cwd only)
+# ls with grep
 function lsg() {
   local dir
   if [[ "$#" -gt "1" ]]; then

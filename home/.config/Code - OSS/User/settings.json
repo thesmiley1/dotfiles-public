@@ -31,17 +31,32 @@
 
   "terminal.external.linuxExec": "konsole",
 
+  "todohighlight.isCaseSensitive": true,
   "todohighlight.isEnable": true,
   "todohighlight.keywords": [
     {
-      "color": "#282c34",
-      "backgroundColor": "#61afef",
-      "text": "NOTE:"
+      "backgroundColor": "#282c34",
+      "color": "#e06c75",
+      "overviewRulerColor": "#e06c7588",
+      "text": "HACK"
     },
     {
-      "color": "#282c34",
-      "backgroundColor": "#56b6c2",
-      "text": "THANKS:"
+      "backgroundColor": "#282c34",
+      "color": "#61afef",
+      "overviewRulerColor": "#61afef88",
+      "text": "NOTE"
+    },
+    {
+      "backgroundColor": "#282c34",
+      "color": "#56b6c2",
+      "overviewRulerColor": "#56b6c288",
+      "text": "THANKS"
+    },
+    {
+      "backgroundColor": "282c34",
+      "color": "#d19a66",
+      "overviewRulerColor": "#d19a6688",
+      "text": "TODO"
     }
   ],
 

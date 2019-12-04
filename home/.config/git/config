@@ -8,6 +8,7 @@
 	f = fetch
 	l = log --stat
 	p = push
+	rb = rebase
 	s = status
 	ss = status --short
 	st = stash

@@ -9,6 +9,7 @@
 	l = log --stat
 	p = push
 	s = status
+	ss = status --short
 [commit]
 	gpgsign = true
 [core]

@@ -133,6 +133,31 @@ export PAGER="less"
 
 ################################################################################
 
+# PATH
+#   environ - user environment
+#
+# The sequence of directory prefixes that sh(1) and many other programs apply in
+# searching for a file known by an incomplete pathname.  The prefixes are
+# separated by ':'.  (Similarly one has CDPATH used by some shells to find the
+# target of a change directory command, MANPATH used by man(1) to find manua
+# pages, and so on)
+
+# prepend $HOME/.local/bin to PATH if it exists
+if [[ -d "${HOME}/.local/bin" ]]; then
+  PATH="${HOME}/.local/bin:$PATH"
+fi
+
+# append GOBIN or GOPATH/bin to PATH if go is installed
+if type -t go > /dev/null; then
+  if [[ -n $(go env GOBIN) ]]; then
+    PATH="${PATH}:$(go env GOBIN)"
+  else
+    PATH="${PATH}:$(go env GOPATH)/bin"
+  fi
+fi
+
+################################################################################
+
 # SSH_AUTH_SOCK
 #   ssh — OpenSSH SSH client (remote login program)
 #

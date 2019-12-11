@@ -10,3 +10,6 @@
 [submodule "home/.local/share/nvim/site/pack/ntpeters/start/vim-better-whitespace"]
 	path = home/.local/share/nvim/site/pack/ntpeters/start/vim-better-whitespace
 	url = https://github.com/ntpeters/vim-better-whitespace.git
+[submodule "home/.local/share/nvim/site/pack/glacambre/start/firenvim"]
+	path = home/.local/share/nvim/site/pack/glacambre/start/firenvim
+	url = https://github.com/glacambre/firenvim.git

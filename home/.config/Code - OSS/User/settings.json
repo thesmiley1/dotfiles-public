@@ -4,7 +4,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
 
   "editor.emptySelectionClipboard": false,
-  "editor.fontFamily": "'Hack','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontFamily": "'Hack Nerd Font','Hack','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.renderControlCharacters": true,
   "editor.renderFinalNewline": true,
   "editor.renderWhitespace": "all",

@@ -13,3 +13,6 @@
 [submodule "home/.local/share/nvim/site/pack/glacambre/start/firenvim"]
 	path = home/.local/share/nvim/site/pack/glacambre/start/firenvim
 	url = https://github.com/glacambre/firenvim.git
+[submodule "home/.local/share/nvim/site/pack/chikamichi/start/mediawiki.vim"]
+	path = home/.local/share/nvim/site/pack/chikamichi/start/mediawiki.vim
+	url = https://github.com/chikamichi/mediawiki.vim.git

@@ -404,6 +404,24 @@ set termguicolors
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" onedark.vim
+
+" Global color overrides
+"
+" You can override colors across all highlights by adding color definitions to
+" the g:onedark_color_overrides dictionary.
+"
+" This needs to be done before colorscheme onedark.
+"
+" More examples of highlight group names and style data can be found in
+" onedark.vim's source code (colors/onedark.vim).
+let g:onedark_color_overrides = {
+  \ "comment_grey": { "gui": "#7f848e", "cterm": "59", "cterm16": "15" },
+  \ "special_grey": { "gui": "#5C6370", "cterm": "238", "cterm16": "15" }
+\ }
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " vim-airline
 
 " Automatically displays all buffers when there's only one tab open
@@ -439,21 +457,3 @@ let g:strip_whitespace_confirm=0
 
 " strip whitespace on save
 let g:strip_whitespace_on_save=1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" onedark.vim
-
-" Global color overrides
-"
-" You can override colors across all highlights by adding color definitions to
-" the g:onedark_color_overrides dictionary.
-"
-" This needs to be done before colorscheme onedark.
-"
-" More examples of highlight group names and style data can be found in
-" onedark.vim's source code (colors/onedark.vim).
-let g:onedark_color_overrides = {
-  \ "comment_grey": { "gui": "#7f848e", "cterm": "59", "cterm16": "15" },
-  \ "special_grey": { "gui": "#5C6370", "cterm": "238", "cterm16": "15" }
-\ }

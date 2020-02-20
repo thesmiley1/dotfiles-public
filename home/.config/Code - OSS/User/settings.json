@@ -29,6 +29,9 @@
 
   "markdown.extension.toc.unorderedList.marker": "*",
 
+  "material-icon-theme.saturation": 0.7,
+  "material-icon-theme.opacity": 1,
+
   "rust-client.rustupPath": "/home/john/.cargo/bin/rustup",
 
   "terminal.external.linuxExec": "konsole",
@@ -79,6 +82,7 @@
     "editor.selectionHighlightBorder":"#00000000",
     "editorWhitespace.foreground": "#5C6370"
   },
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "left",
 
   "[python]": {

@@ -4,7 +4,7 @@
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"vim-better-whitespace
+" vim-better-whitespace
 
 " Better whitespace highlighting for vim
 

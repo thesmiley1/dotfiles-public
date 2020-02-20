@@ -404,6 +404,23 @@ set termguicolors
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" firenvim
+
+let g:firenvim_config = {
+  \ 'localSettings': {
+    \ '.*': {
+      \ 'selector': 'textarea',
+      \ 'priority': 0,
+    \ },
+    \ 'docs\.google\.com': {
+      \ 'selector': '',
+      \ 'priority': 1,
+    \ }
+  \ }
+\ }
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " onedark.vim
 
 " Global color overrides

@@ -4,62 +4,6 @@
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" vim-better-whitespace
-
-" Better whitespace highlighting for vim
-
-" set a custom highlight cterm color
-let g:better_whitespace_ctermbg=196
-
-" enable highlighting
-let g:better_whitespace_enabled=1
-
-" set a custom highlight gui color
-let g:better_whitespace_guicolor="#BE5046"
-
-" highlight space characters that appear before or in-between tabs
-let g:show_spaces_that_precede_tabs=1
-
-" strip white lines at the end of the file when stripping whitespace
-let g:strip_whitelines_at_eof=1
-
-" disable asking for confirmation before stripping whitespace when file is saved
-let g:strip_whitespace_confirm=0
-
-" strip whitespace on save
-let g:strip_whitespace_on_save=1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" onedark.vim
-
-" Global color overrides
-"
-" You can override colors across all highlights by adding color definitions to
-" the g:onedark_color_overrides dictionary.
-"
-" This needs to be done before colorscheme onedark.
-"
-" More examples of highlight group names and style data can be found in
-" onedark.vim's source code (colors/onedark.vim).
-let g:onedark_color_overrides = {
-  \ "comment_grey": { "gui": "#7f848e", "cterm": "59", "cterm16": "15" },
-  \ "special_grey": { "gui": "#5C6370", "cterm": "238", "cterm16": "15" }
-\ }
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" vim-airline
-
-" Automatically displays all buffers when there's only one tab open
-let g:airline#extensions#tabline#enabled=1
-
-" By default, airline will use unicode symbols if your encoding matches utf-8.
-" If you want the powerline symbols set this variable.
-let g:airline_powerline_fonts=1
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " :pa[ckadd][!] {name}
 "
 " Search for an optional plugin directory in 'packpath' and source any plugin
@@ -459,3 +403,57 @@ set tabstop=2
 set termguicolors
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" vim-airline
+
+" Automatically displays all buffers when there's only one tab open
+let g:airline#extensions#tabline#enabled=1
+
+" By default, airline will use unicode symbols if your encoding matches utf-8.
+" If you want the powerline symbols set this variable.
+let g:airline_powerline_fonts=1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" vim-better-whitespace
+
+" Better whitespace highlighting for vim
+
+" set a custom highlight cterm color
+let g:better_whitespace_ctermbg=196
+
+" enable highlighting
+let g:better_whitespace_enabled=1
+
+" set a custom highlight gui color
+let g:better_whitespace_guicolor="#BE5046"
+
+" highlight space characters that appear before or in-between tabs
+let g:show_spaces_that_precede_tabs=1
+
+" strip white lines at the end of the file when stripping whitespace
+let g:strip_whitelines_at_eof=1
+
+" disable asking for confirmation before stripping whitespace when file is saved
+let g:strip_whitespace_confirm=0
+
+" strip whitespace on save
+let g:strip_whitespace_on_save=1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" onedark.vim
+
+" Global color overrides
+"
+" You can override colors across all highlights by adding color definitions to
+" the g:onedark_color_overrides dictionary.
+"
+" This needs to be done before colorscheme onedark.
+"
+" More examples of highlight group names and style data can be found in
+" onedark.vim's source code (colors/onedark.vim).
+let g:onedark_color_overrides = {
+  \ "comment_grey": { "gui": "#7f848e", "cterm": "59", "cterm16": "15" },
+  \ "special_grey": { "gui": "#5C6370", "cterm": "238", "cterm16": "15" }
+\ }

@@ -498,6 +498,10 @@ let g:firenvim_config = {
     \ 'docs\.google\.com': {
       \ 'selector': '',
       \ 'priority': 1,
+    \ },
+    \ 'photos\.google\.com': {
+      \ 'selector': '',
+      \ 'priority': 1,
     \ }
   \ }
 \ }

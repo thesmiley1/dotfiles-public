@@ -114,6 +114,10 @@ alias g="git"
 #   GREP_COLORS.  The deprecated environment variable GREP_COLOR is still
 #   supported, but its setting does not have priority.  WHEN is never, always,
 #   or auto.
+#
+# -i, --ignore-case
+#   Ignore case distinctions in patterns and input data, so that characters that
+#   differ only in case match each other.
 
 alias grep="grep --color=auto --ignore-case"
 

@@ -13,6 +13,42 @@ declare -g DIRSTACKSIZE="20"
 
 ################################################################################
 
+# GIT_PS1_SHOWDIRTYSTATE
+#   git-prompt.sh - allows you to see repository status in your prompt
+#
+# In addition, if you set GIT_PS1_SHOWDIRTYSTATE to a nonempty value,
+# unstaged (*) and staged (+) changes will be shown next to the branch name.
+# You can configure this per-repository with the bash.showDirtyState variable,
+# which defaults to true once GIT_PS1_SHOWDIRTYSTATE is enabled.
+
+declare -g GIT_PS1_SHOWDIRTYSTATE="1"
+
+################################################################################
+
+# GIT_PS1_SHOWSTASHSTATE
+#   git-prompt.sh - allows you to see repository status in your prompt
+#
+# You can also see if currently something is stashed, by setting
+# GIT_PS1_SHOWSTASHSTATE to a nonempty value.  If something is stashed, then a
+# '$' will be shown next to the branch name.
+
+declare -g GIT_PS1_SHOWSTASHSTATE="1"
+
+################################################################################
+
+# GIT_PS1_SHOWUNTRACKEDFILES
+#   git-prompt.sh - allows you to see repository status in your prompt
+#
+# If you would like to see if there're untracked files, then you can set
+# GIT_PS1_SHOWUNTRACKEDFILES to a nonempty value.  If there're untracked files,
+# then a '%' will be shown next to the branch name.  You can configure this
+# per-repository with the bash.showUntrackedFiles variable, which defaults to
+# true once GIT_PS1_SHOWUNTRACKEDFILES is enabled.
+
+declare -g GIT_PS1_SHOWUNTRACKEDFILES="1"
+
+################################################################################
+
 # HISTFILE
 #   zsh - the Z shell
 #

@@ -22,5 +22,7 @@ source "${source_dir}/completion.zsh"
 source "${source_dir}/zle.zsh"
 source "${source_dir}/zutil.zsh"
 
+source "${source_dir}/lgr.zsh"
+
 unset plugins_dir
 unset source_dir

@@ -90,7 +90,7 @@ function __ps1_cache {
   declare -r     ICON_MONITOR_FILL="\uF3CB" # 
   declare -r            ICON_MUSIC="\uF001" # 
   declare -r     ICON_OCTOCAT_FACE="\uF113" # 
-  declare -r           ICON_PENCIL="\uF358" # 
+  declare -r           ICON_PENCIL="\uF040" # 
   declare -r          ICON_PACKAGE="\uF3BA" # 
   declare -r          ICON_PENGUIN="\uF17C" # 
   declare -r    ICON_PENGUIN_SMALL="\uF31A" # 

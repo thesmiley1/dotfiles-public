@@ -1,6 +1,19 @@
 #! /usr/bin/env zsh
 
 function __ps1() {
+  declare -r CURSOR_BEAM="\e[6 q"
+  declare -r CURSOR_BLOCK="\e[2 q"
+
+  local cursor
+  case "${KEYMAP}" in
+    vicmd)      cursor="${CURSOR_BLOCK}" ;;
+    viins|main) cursor="${CURSOR_BEAM}" ;;
+  esac
+
+  echo "${__PS1_CACHE}${cursor}"
+}
+
+function __ps1_cache {
   declare -r _PIPESTATUS=($pipestatus)
 
   ##############################################################################
@@ -27,11 +40,6 @@ function __ps1() {
   declare -r     COLOR_RED="{red}"
   declare -r   COLOR_WHITE="{white}"
   declare -r  COLOR_YELLOW="{yellow}"
-
-  ################################## Cursors ###################################
-
-  declare -r CURSOR_BEAM="\e[6 q"
-  declare -r CURSOR_BLOCK="\e[2 q"
 
   ################################## Glyphs ####################################
 
@@ -144,12 +152,19 @@ function __ps1() {
   # SEGMENT_DATE="${SEGMENT_DATE}${CODE_FOREGROUND}${date_color_fg}"
   # SEGMENT_DATE="${SEGMENT_DATE} "
 
+  local date_out
+  date_out="$(date +"%m/%d/%Y %H:%M:%S")"
+
+  local date_date="${date_out% *}"
+
+  local date_time="${date_out#* }"
+
   SEGMENT_DATE="${SEGMENT_DATE}${CODE_BACKGROUND}${date_color_bg}"
   SEGMENT_DATE="${SEGMENT_DATE}${CODE_FOREGROUND}${date_color_fg}"
   SEGMENT_DATE="${SEGMENT_DATE} "
 
-  SEGMENT_DATE="${SEGMENT_DATE}${ICON_CALENDAR}${ICON_SPACE}${__PS1_DATE}"
-  SEGMENT_DATE="${SEGMENT_DATE} ${ICON_CLOCK}${ICON_SPACE}${__PS1_TIME}"
+  SEGMENT_DATE="${SEGMENT_DATE}${ICON_CALENDAR}${ICON_SPACE}${date_date}"
+  SEGMENT_DATE="${SEGMENT_DATE} ${ICON_CLOCK}${ICON_SPACE}${date_time}"
   SEGMENT_DATE="${SEGMENT_DATE} "
 
   ################################ User Segment ################################
@@ -553,11 +568,5 @@ function __ps1() {
   SEGMENT_ALL="${SEGMENT_ALL}${SEGMENT_HOSTNAME}${SEGMENT_PWD}${SEGMENT_GIT}"
   SEGMENT_ALL="${SEGMENT_ALL}${SEGMENT_EXIT}${SEGMENT_LAST}"
 
-  local cursor
-  case "${KEYMAP}" in
-    vicmd)      cursor="${CURSOR_BLOCK}" ;;
-    viins|main) cursor="${CURSOR_BEAM}" ;;
-  esac
-
-  echo "${SEGMENT_ALL}${cursor}"
+  declare -g __PS1_CACHE="${SEGMENT_ALL}"
 }

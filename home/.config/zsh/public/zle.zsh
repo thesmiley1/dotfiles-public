@@ -26,12 +26,7 @@ zle -N zle-keymap-select
 
 # Executed every time the line editor is started to read a new line of input.
 function zle-line-init {
-  local date_out
-  date_out="$(date +"%m/%d/%Y %H:%M:%S")"
-
-  declare -g __PS1_DATE="${date_out% *}"
-
-  declare -g __PS1_TIME="${date_out#* }"
+  __ps1_cache
 
   zle reset-prompt
 }

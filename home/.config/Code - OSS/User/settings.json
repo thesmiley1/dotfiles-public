@@ -36,6 +36,8 @@
 
   "terminal.external.linuxExec": "konsole",
 
+  "terminal.integrated.cursorBlinking": true,
+
   "todohighlight.isCaseSensitive": true,
   "todohighlight.isEnable": true,
   "todohighlight.keywords": [

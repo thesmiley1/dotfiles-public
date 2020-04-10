@@ -437,6 +437,7 @@ function __ps1_cache {
       if [[ "${git_ps1}" == *"${git_separator}"* ]]; then
         git_status="${git_ps1#*${git_separator}}"
       fi
+      git_status="${git_status:s/%%/%}"
 
       if [[ "${git_ps1}" == *"|REBASE"* ]]; then
         local temp="${git_ps1%*"|REBASE"*}"

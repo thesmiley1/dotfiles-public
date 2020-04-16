@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=One Dark
-Font=Hack Nerd Font,10,-1,5,50,0,0,0,0,0,Regular
+Font=Hack Nerd Font,10,-1,5,50,0,0,0,0,0
 
 [General]
 LocalTabTitleFormat=%w

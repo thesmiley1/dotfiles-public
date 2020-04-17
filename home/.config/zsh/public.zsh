@@ -9,8 +9,8 @@ source "${source_dir}/options.zsh"
 source "${source_dir}/environment.zsh"
 source "${source_dir}/global.zsh"
 
-source "${source_dir}/_git_prompt.zsh"
-source "${source_dir}/_ps1.zsh"
+source "${source_dir}/git-prompt.zsh"
+source "${source_dir}/prompt.zsh"
 
 source "${plugins_dir}/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "${plugins_dir}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

@@ -1,6 +1,7 @@
 #! /usr/bin/env zsh
 
 function __title {
+  # THANKS https://superuser.com/a/414953/1133268
   echo -en "\033];${USER}@${HOST}:$(basename "${PWD/${HOME}/~}") ${1}\007"
 }
 

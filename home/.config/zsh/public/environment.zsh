@@ -198,6 +198,52 @@ export VISUAL
 
 ################################################################################
 
+# XDG_*_DIR
+#   XDG User DIrectory
+
+if type xdg-user-dirs-update > /dev/null; then
+  xdg-user-dirs-update
+fi
+
+while read -r "line"; do
+  if [[ "${line}" =~ "^#" ]]; then
+    continue
+  fi
+  eval "declare -g export ${line}"
+done < "${XDG_CONFIG_HOME:-${HOME}/.config}/user-dirs.dirs"
+
+################################################################################
+
+# XDG_CACHE_HOME
+#   XDG Base Drectory
+#
+# Defines the base directory relative to which user specific non-essential data
+# files should be stored.
+
+declare -g export XDG_CACHE_HOME="${HOME}/.cache"
+
+################################################################################
+
+# XDG_CONFIG_HOME
+#   XDG Base Directory
+#
+# Defines the base directory relative to which user specific configuration files
+# should be stored.
+
+declare -g export XDG_CONFIG_HOME="${HOME}/.config"
+
+################################################################################
+
+# XDG_DATA_HOME
+#   XDG Base Directory
+#
+# Defines the base directory relative to which user specific data files should
+# be stored.
+
+declare -g export XDG_DATA_HOME="${HOME}/.local/share"
+
+################################################################################
+
 # XZ_OPT
 #   xz, unxz, xzcat, lzma, unlzma, lzcat - Compress or decompress .xz and .lzma
 #   files

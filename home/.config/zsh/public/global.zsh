@@ -292,4 +292,4 @@ declare -g SAVEHIST="1000"
 # styled bold, underlined, or standout.  For more info, read the Character
 # Highlighting section of the zsh manual: man zshzle.
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#5C6370"
+declare -g ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#5C6370"

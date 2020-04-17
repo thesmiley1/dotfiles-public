@@ -132,7 +132,7 @@ fi
 # change the settings.  Use the dircolors command to set it.
 
 if type dircolors > /dev/null; then
-  eval "$(dircolors "${HOME}/.config/dircolors/database")"
+  eval "$(dircolors "${XDG_CONFIG_HOME:-${HOME}/.config}/dircolors/database")"
 fi
 
 ################################################################################

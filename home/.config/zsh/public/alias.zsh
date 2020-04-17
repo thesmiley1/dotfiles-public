@@ -17,7 +17,7 @@
 #
 # cd — change the working directory
 
-alias c="cd ${HOME}/Code"
+alias c="cd ${$(xdg-user-dir "CODE" 2> /dev/null):-${HOME}/Code}"
 
 ################################################################################
 

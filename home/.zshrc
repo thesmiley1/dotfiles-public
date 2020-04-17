@@ -1,3 +1,3 @@
 #! /usr/bin/env zsh
 
-source "${HOME}/.config/zsh/public.zsh"
+source "${XDG_CONFIG_HOME:-${HOME}/.config}/zsh/public.zsh"

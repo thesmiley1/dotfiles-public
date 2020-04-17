@@ -1,8 +1,7 @@
 #! /usr/bin/env zsh
 
 local plugins_dir="/usr/share/zsh/plugins"
-
-local source_dir="${HOME}/.config/zsh/public"
+local source_dir="${XDG_CONFIG_HOME:-${HOME}/.config}/zsh/public"
 
 source "${source_dir}/options.zsh"
 

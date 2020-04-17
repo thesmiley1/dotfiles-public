@@ -55,7 +55,10 @@ declare -g GIT_PS1_SHOWUNTRACKEDFILES="1"
 # The file to save the history in when an interactive shell exits.  If unset,
 # the history is not saved.
 
-declare -g HISTFILE="${HOME}/.cache/zsh/history"
+local histfile="${XDG_DATA_HOME:-${HOME}/.local/share}/zsh/history"
+mkdir -p "${histfile}" 2> /dev/null
+declare -g HISTFILE="${histfile}"
+unset histfile
 
 ################################################################################
 

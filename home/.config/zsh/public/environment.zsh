@@ -171,6 +171,11 @@ if type go > /dev/null; then
   fi
 fi
 
+# append $HOME/.cargo/bin to PATH if it exists
+if [[ -d "${HOME}/.cargo/bin" ]]; then
+  PATH="${PATH}:${HOME}/.cargo/bin"
+fi
+
 ################################################################################
 
 # SSH_AUTH_SOCK

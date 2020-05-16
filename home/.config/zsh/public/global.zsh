@@ -56,7 +56,7 @@ declare -g GIT_PS1_SHOWUNTRACKEDFILES="1"
 # the history is not saved.
 
 local histfile="${XDG_DATA_HOME:-${HOME}/.local/share}/zsh/history"
-mkdir -p "${histfile}" 2> /dev/null
+mkdir -p "$(dirname "${histfile}")" 2> /dev/null
 declare -g HISTFILE="${histfile}"
 unset histfile
 

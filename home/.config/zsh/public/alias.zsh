@@ -67,8 +67,18 @@ alias gr="grep --color=auto --ignore-case"
 
 ################################################################################
 
-# l
-#   ls --all --color=auto --human-readable -l
+# l{1,4}a?
+#
+# lsd - ls deluxe
+#
+# -a, --all
+#   Do not ignore entries starting with .
+#
+# -l, --long
+#   Display extended file metadata as a table
+#
+# --tree
+#   Recurse into directories and present the result as a tree
 #
 # ls - list directory contents
 #
@@ -80,28 +90,30 @@ alias gr="grep --color=auto --ignore-case"
 #   'never'
 #
 # -h, --human-readable
-#   with -l and -s, print sizes like 1K 234M 2G etc.
+#   with -l and -s, print sizes like 1K 234M 2G etc
 #
 # -l
 #   use a long listing format
-
-alias l="ls --all --color=auto --human-readable -l"
-
-################################################################################
-
-# ll
-#   ls --color=auto --human-readable -l
 #
-# ls - list directory contents
-#
-# --color[=WHEN]
-#   colorize the output; WHEN can be 'always' (default if omitted), 'auto', or
-#   'never'
-#
-# -h, --human-readable
-#   with -l and -s, print sizes like 1K 234M 2G etc.
-#
-# -l
-#   use a long listing format
+# -R, --recursive
+#   list subdirectories recursively
 
-alias ll="ls --color=auto --human-readable -l"
+if type lsd > /dev/null; then
+  alias l="lsd"
+  alias la="lsd --all"
+  alias ll="lsd --long"
+  alias lla="lsd --all --long"
+  alias lll="lsd --tree"
+  alias llla="lsd --all --tree"
+  alias llll="lsd --long --tree"
+  alias lllla="lsd --all --long --tree"
+else
+  alias l="ls --color=auto"
+  alias la="ls --all --color=auto"
+  alias ll="ls --color=auto --human-readable -l"
+  alias lla="ls --all --color=auto --human-readable -l"
+  alias lll="ls --color=auto --recursive"
+  alias llla="ls --all --color=auto --recursive"
+  alias llll="ls --color=auto --human-readable -l --recursive"
+  alias lllla="ls --all --color=auto --human-readable -l --recursive"
+fi

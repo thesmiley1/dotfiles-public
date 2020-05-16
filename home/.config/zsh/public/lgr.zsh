@@ -9,43 +9,19 @@ function lgr() {
     dir="."
   fi
 
-  l "${dir}"| gr "${@}"
+  l "${dir}" | gr "${@}"
 }
 
-function lgrd {
+function lagr() {
   local dir
-  if [[ "$#" -gt "0" ]]; then
+  if [[ "$#" -gt "1" ]]; then
     dir="${1}"
     shift
   else
     dir="."
   fi
 
-  lgr "${dir}" "^d" "${@}"
-}
-
-function lgrf {
-  local dir
-  if [[ "$#" -gt "0" ]]; then
-    dir="${1}"
-    shift
-  else
-    dir="."
-  fi
-
-  lgr "${dir}" "^-" "${@}"
-}
-
-function lgrl {
-  local dir
-  if [[ "$#" -gt "0" ]]; then
-    dir="${1}"
-    shift
-  else
-    dir="."
-  fi
-
-  lgr "${dir}" "^l" "${@}"
+  la "${dir}" | gr "${@}"
 }
 
 function llgr() {
@@ -57,10 +33,10 @@ function llgr() {
     dir="."
   fi
 
-  ll "${dir}"| gr "${@}"
+  ll "${dir}" | gr "${@}"
 }
 
-function llgrd {
+function llgrd() {
   local dir
   if [[ "$#" -gt "0" ]]; then
     dir="${1}"
@@ -72,7 +48,7 @@ function llgrd {
   llgr "${dir}" "^d" "${@}"
 }
 
-function llgrf {
+function llgrf() {
   local dir
   if [[ "$#" -gt "0" ]]; then
     dir="${1}"
@@ -81,10 +57,14 @@ function llgrf {
     dir="."
   fi
 
-  llgr "${dir}" "^-" "${@}"
+  if type lsd > /dev/null; then
+    llgr "${dir}" "^\\." "${@}"
+  else
+    llgr "${dir}" "^-" "${@}"
+  fi
 }
 
-function llgrl {
+function llgrl() {
   local dir
   if [[ "$#" -gt "0" ]]; then
     dir="${1}"
@@ -94,4 +74,56 @@ function llgrl {
   fi
 
   llgr "${dir}" "^l" "${@}"
+}
+
+function llagr() {
+  local dir
+  if [[ "$#" -gt "1" ]]; then
+    dir="${1}"
+    shift
+  else
+    dir="."
+  fi
+
+  lla "${dir}" | gr "${@}"
+}
+
+function llagrd() {
+  local dir
+  if [[ "$#" -gt "0" ]]; then
+    dir="${1}"
+    shift
+  else
+    dir="."
+  fi
+
+  llagr "${dir}" "^d" "${@}"
+}
+
+function llagrf() {
+  local dir
+  if [[ "$#" -gt "0" ]]; then
+    dir="${1}"
+    shift
+  else
+    dir="."
+  fi
+
+  if type lsd > /dev/null; then
+    llagr "${dir}" "^\\." "${@}"
+  else
+    llagr "${dir}" "^-" "${@}"
+  fi
+}
+
+function llagrl() {
+  local dir
+  if [[ "$#" -gt "0" ]]; then
+    dir="${1}"
+    shift
+  else
+    dir="."
+  fi
+
+  llagr "${dir}" "^l" "${@}"
 }

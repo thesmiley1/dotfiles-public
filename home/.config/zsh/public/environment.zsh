@@ -176,6 +176,16 @@ if [[ -d "${HOME}/.cargo/bin" ]]; then
   PATH="${PATH}:${HOME}/.cargo/bin"
 fi
 
+# append user gem bin path to PATH if ruby is installed
+# this is typically $HOME/.gem/x.y.z/bin
+if type ruby > /dev/null; then
+  local gem_bin_path="$(ruby -e "puts File.join(Gem.user_dir, 'bin')")"
+  if [[ -d "${gem_bin_path}" ]]; then
+    PATH="${PATH}:${gem_bin_path}"
+  fi
+  unset gem_bin_path
+fi
+
 ################################################################################
 
 # SSH_AUTH_SOCK

@@ -16,3 +16,6 @@
 [submodule "home/.local/share/nvim/site/pack/chikamichi/start/mediawiki.vim"]
 	path = home/.local/share/nvim/site/pack/chikamichi/start/mediawiki.vim
 	url = https://github.com/chikamichi/mediawiki.vim.git
+[submodule "home/.local/share/nvim/site/pack/preservim/start/nerdcommenter"]
+	path = home/.local/share/nvim/site/pack/preservim/start/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git

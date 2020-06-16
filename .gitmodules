@@ -19,3 +19,6 @@
 [submodule "home/.local/share/nvim/site/pack/preservim/start/nerdcommenter"]
 	path = home/.local/share/nvim/site/pack/preservim/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
+[submodule "home/.local/share/nvim/site/pack/preservim/start/nerdtree"]
+	path = home/.local/share/nvim/site/pack/preservim/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git

@@ -273,8 +273,27 @@ unset os_release
 # The primary prompt string, printed before a command is read.  It undergoes a
 # special form of expansion before being displayed; see EXPANSION OF PROMPT
 # SEQUENCES in zshmisc(1).  The default is `%m%# '.
+#
+# %(x.true-text.false-text)
+#
+#   Specifies a ternary expression.  The character following the x is arbitrary;
+#   the same character is used to separate the text for the ‘true’ result from
+#   that for the ‘false’ result.  This separator may not appear in the
+#   true-text, except as part of a %-escape sequence.  A ‘)’ may appear in the
+#   false-text as ‘%)’.  true-text and false-text may both contain
+#   arbitrarily-nested escape sequences, including further ternary expressions.
+#
+#   The left parenthesis may be preceded or followed by a positive integer n,
+#   which defaults to zero.  A negative integer will be multiplied by -1, except
+#   as noted below for ‘l’.  The test character x may be any of the following:
+#
+#   !
+#
+#     True if the shell is running with privileges.
+#
+#   ...
 
-declare -g PS1=$'$(__ps1)\n\$ '
+declare -g PS1=$'$(__ps1)\n%(!.#.\$) '
 
 ################################################################################
 

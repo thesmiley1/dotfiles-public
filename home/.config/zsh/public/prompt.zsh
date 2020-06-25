@@ -106,6 +106,7 @@ function __ps1_cache {
   declare -r     ICON_SLIDERS_HORZ="\uF1DE" # 
   declare -r          ICON_TOOLBOX="\uF0B1" # 
   declare -r            ICON_TRUCK="\uF0D1" # 
+  declare -r           ICON_UBUNTU="\uF31B" # 
   declare -r        ICON_USER_FILL="\uF007" # 
   declare -r       ICON_USER_MULTI="\uF0C0" # 
   declare -r     ICON_USER_OUTLINE="\uF2C0" # 
@@ -221,7 +222,8 @@ function __ps1_cache {
   local hostname_icon_os
 
   case "${OS_RELEASE_ID}" in
-    "arch") hostname_icon_os="${ICON_ARCH}" ;;
+    "arch"  ) hostname_icon_os="${ICON_ARCH}"   ;;
+    "ubuntu") hostname_icon_os="${ICON_UBUNTU}" ;;
     *     )
       if [[ -n "${OS_RELEASE_ID}" ]]; then
         hostname_icon_os="${ICON_PENGUIN_SMALL}"

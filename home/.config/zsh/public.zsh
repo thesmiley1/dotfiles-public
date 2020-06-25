@@ -40,6 +40,10 @@ source "${source_dir}/zutil.zsh"
 
 source "${source_dir}/lgr.zsh"
 
+if [[ -e "${HOME}/.homesick/repos/homeshick/homeshick.sh" ]]; then
+  source "${HOME}/.homesick/repos/homeshick/homeshick.sh"
+fi
+
 unset plugin
 unset plugins
 unset plugins_dir

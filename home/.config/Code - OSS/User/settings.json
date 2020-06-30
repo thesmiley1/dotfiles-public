@@ -32,6 +32,8 @@
   "material-icon-theme.saturation": 0.7,
   "material-icon-theme.opacity": 1,
 
+  "oneDarkPro.italic": false,
+
   "rust-client.rustupPath": "/home/john/.cargo/bin/rustup",
 
   "terminal.external.linuxExec": "konsole",
@@ -78,7 +80,7 @@
   "window.restoreWindows": "none",
   "window.titleBarStyle": "native",
 
-  "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorTheme": "One Dark Pro",
   "workbench.colorCustomizations": {
     "editor.selectionHighlightBackground": "#ffffff1a",
     "editor.selectionHighlightBorder":"#00000000",

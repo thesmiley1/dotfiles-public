@@ -2,6 +2,7 @@
   "bashIde.path": "/usr/bin/bash-language-server",
 
   "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": true,
 
   "editor.emptySelectionClipboard": false,
   "editor.fontFamily": "'Hack Nerd Font','Hack','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",

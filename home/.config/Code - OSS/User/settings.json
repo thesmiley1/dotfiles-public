@@ -79,6 +79,7 @@
 
   "window.restoreWindows": "none",
   "window.titleBarStyle": "native",
+  "window.zoomLevel": 0,
 
   "workbench.colorTheme": "One Dark Pro",
   "workbench.colorCustomizations": {

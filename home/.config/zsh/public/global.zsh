@@ -10,7 +10,7 @@
 # example, if the value is ‘.*’ then dot file names will never be offered as
 # spelling corrections.  This is useful with the CORRECT_ALL option.
 
-CORRECT_IGNORE_FILE=".docker"
+CORRECT_IGNORE_FILE=".((docker)|(ssh))"
 
 ################################################################################
 

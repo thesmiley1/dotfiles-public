@@ -137,6 +137,26 @@ fi
 
 ################################################################################
 
+# MAKEFLAGS
+#   make - GNU make utility to maintain groups of programs
+#
+# This is often used to set the number of jobs used; for example, -j2.  Other
+# flags that make accepts can also be passed.
+#
+# -j [jobs], --jobs[=jobs]
+#   Specifies the number of jobs (commands) to run simultaneously.  If there is
+#   more than one -j option, the last one is effective.  If the -j option is
+#   given without an argument, make will not limit the number of jobs that can
+#   run simultaneously.
+#
+
+if type nproc > /dev/null; then
+  declare -g MAKEFLAGS="-j$(nproc)"
+  export MAKEFLAGS
+fi
+
+################################################################################
+
 # PAGER
 #   environ - user environment
 #

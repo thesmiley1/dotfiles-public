@@ -2,6 +2,18 @@
 
 ################################################################################
 
+# CORRECT_IGNORE_FILE
+#   zsh - the Z shell
+#
+# If set, is treated as a pattern during spelling correction of file names.  Any
+# file name that matches the pattern is never offered as a correction.  For
+# example, if the value is ‘.*’ then dot file names will never be offered as
+# spelling corrections.  This is useful with the CORRECT_ALL option.
+
+CORRECT_IGNORE_FILE=".docker"
+
+################################################################################
+
 # DIRSTACKSIZE
 #   zsh - the Z shell
 #

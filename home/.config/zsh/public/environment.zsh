@@ -31,7 +31,7 @@ function __editor() {
 #
 # The user's preferred utility to edit text files
 
-EDITOR="$(__editor)"
+declare -g EDITOR="$(__editor)"
 export EDITOR
 
 ################################################################################
@@ -41,7 +41,7 @@ export EDITOR
 #
 # If set directory used instead of "~/.gnupg".
 
-GNUPGHOME="${HOME}/.gnupg"
+declare -g GNUPGHOME="${HOME}/.gnupg"
 export GNUPGHOME
 
 ################################################################################
@@ -53,7 +53,7 @@ export GNUPGHOME
 # the tty command.
 
 if type gpg-connect-agent > /dev/null; then
-  GPG_TTY=$(tty)
+  declare -g GPG_TTY=$(tty)
   export GPG_TTY
   gpg-connect-agent updatestartuptty /bye > /dev/null
 fi
@@ -93,7 +93,8 @@ fi
 #   two.  For example, -x9,17 will set tabs at positions 9, 17, 25, 33, etc.
 #   The default for n is 8.
 
-export LESS="--IGNORE-CASE --RAW-CONTROL-CHARS --tabs=2"
+declare -g LESS="--IGNORE-CASE --RAW-CONTROL-CHARS --tabs=2"
+export LESS
 
 ################################################################################
 
@@ -105,7 +106,8 @@ export LESS="--IGNORE-CASE --RAW-CONTROL-CHARS --tabs=2"
 # pygmentize allowed).
 
 if type pygmentize > /dev/null; then
-  export LESSCOLORIZER="pygmentize"
+  declare -g LESSCOLORIZER="pygmentize"
+  export LESSCOLORIZER
 fi
 
 ################################################################################
@@ -118,7 +120,8 @@ fi
 # Source-highlight - convert source code to syntax highlighted document
 
 if type src-hilite-lesspipe.sh > /dev/null; then
-  export LESSOPEN="| src-hilite-lesspipe.sh %s"
+  declare -g LESSOPEN="| src-hilite-lesspipe.sh %s"
+  export LESSOPEN
 fi
 
 ################################################################################
@@ -164,7 +167,8 @@ fi
 #
 # less - opposite of more
 
-export PAGER="less"
+declare -g PAGER="less"
+export PAGER
 
 ################################################################################
 
@@ -179,7 +183,7 @@ export PAGER="less"
 
 # prepend $HOME/.local/bin to PATH if it exists
 if [[ -d "${HOME}/.local/bin" ]]; then
-  PATH="${HOME}/.local/bin:$PATH"
+  PATH="${HOME}/.local/bin:${PATH}"
 fi
 
 # append GOBIN or GOPATH/bin to PATH if go is installed
@@ -216,9 +220,11 @@ fi
 
 # set SSH_AUTH_SOCK to point to gpg-agent socket, if it exists
 if [[ -n "${XDG_RUNTIME_DIR}" && -S "${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh" ]]; then
-  export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
+  declare -g SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
+  export SSH_AUTH_SOCK
 elif [[ -S "${GNUPGHOME}/S.gpg-agent.ssh" ]]; then
-  export SSH_AUTH_SOCK="${GNUPGHOME}/S.gpg-agent.ssh"
+  declare -g SSH_AUTH_SOCK="${GNUPGHOME}/S.gpg-agent.ssh"
+  export SSH_AUTH_SOCK
 fi
 
 ################################################################################
@@ -228,7 +234,7 @@ fi
 #
 # The user's preferred utility to edit text files
 
-VISUAL="$(__editor)"
+declare -g VISUAL="$(__editor)"
 export VISUAL
 
 ################################################################################
@@ -240,12 +246,19 @@ if type xdg-user-dirs-update > /dev/null; then
   xdg-user-dirs-update
 fi
 
+local a
 while read -r "line"; do
   if [[ "${line}" =~ "^#" ]]; then
     continue
   fi
-  eval "declare -g export ${line}"
+
+  eval "declare -g ${line}"
+
+  # split line on '='
+  a=("${(@s/=/)line}")
+  eval "export ${a[1]}"
 done < "${XDG_CONFIG_HOME:-${HOME}/.config}/user-dirs.dirs"
+unset a
 
 ################################################################################
 
@@ -255,7 +268,8 @@ done < "${XDG_CONFIG_HOME:-${HOME}/.config}/user-dirs.dirs"
 # Defines the base directory relative to which user specific non-essential data
 # files should be stored.
 
-declare -g export XDG_CACHE_HOME="${HOME}/.cache"
+declare -g XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_CACHE_HOME
 
 ################################################################################
 
@@ -265,7 +279,8 @@ declare -g export XDG_CACHE_HOME="${HOME}/.cache"
 # Defines the base directory relative to which user specific configuration files
 # should be stored.
 
-declare -g export XDG_CONFIG_HOME="${HOME}/.config"
+declare -g XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CONFIG_HOME
 
 ################################################################################
 
@@ -275,7 +290,8 @@ declare -g export XDG_CONFIG_HOME="${HOME}/.config"
 # Defines the base directory relative to which user specific data files should
 # be stored.
 
-declare -g export XDG_DATA_HOME="${HOME}/.local/share"
+declare -g XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_DATA_HOME
 
 ################################################################################
 
@@ -313,7 +329,8 @@ declare -g export XDG_DATA_HOME="${HOME}/.local/share"
 #   All files compressed in multi-threaded mode meet this condition, but files
 #   compressed in single-threaded mode don't even if --block-size=size is used.
 
-export XZ_OPT="--threads=0"
+declare -g XZ_OPT="--threads=0"
+export XZ_OPT
 
 ################################################################################
 

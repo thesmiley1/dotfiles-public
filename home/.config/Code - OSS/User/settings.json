@@ -48,6 +48,12 @@
       "backgroundColor": "#282c34",
       "color": "#e06c75",
       "overviewRulerColor": "#e06c7588",
+      "text": "DEPRECATED"
+    },
+    {
+      "backgroundColor": "#282c34",
+      "color": "#e06c75",
+      "overviewRulerColor": "#e06c7588",
       "text": "FIXME"
     },
     {

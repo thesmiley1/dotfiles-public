@@ -36,6 +36,24 @@ alias dif="diff --color=auto --unified"
 
 ################################################################################
 
+# ffm
+#   ffmpeg
+#
+#   ffmpeg - ffmpeg video converter
+
+alias ffm="ffmpeg -hide_banner"
+
+################################################################################
+
+# ffp
+#   ffprobe
+#
+#   ffprobe - ffprobe media prober
+
+alias ffp="ffprobe -hide_banner"
+
+################################################################################
+
 # g
 #   git
 #

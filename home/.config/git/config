@@ -25,6 +25,8 @@
 	ff = only
 [pull]
 	ff = only
+[tag]
+	gpgsign = true
 [user]
 	email = john@schroedernet.software
 	name = John Schroeder

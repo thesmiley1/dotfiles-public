@@ -42,6 +42,7 @@ source "${source_dir}/lgr.zsh"
 
 if [[ -e "${HOME}/.homesick/repos/homeshick/homeshick.sh" ]]; then
   source "${HOME}/.homesick/repos/homeshick/homeshick.sh"
+  homeshick refresh --quiet
 fi
 
 unset plugin

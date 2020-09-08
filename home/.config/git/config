@@ -14,6 +14,7 @@
 	st = stash
 [commit]
 	gpgsign = true
+	template = /home/john/.config/git/commit-template
 [core]
 	excludesFile = ~/.config/git/ignore
 	pager = less -F -x1,3

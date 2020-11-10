@@ -1,5 +1,7 @@
 // <https://commitlint.js.org/#/reference-configuration?id=configuration>
 
+'use strict'
+
 // # Configuration
 //
 // `@commitlint/cli` picks up configuration from `./commitlint.config.js`.

@@ -13,8 +13,6 @@
 // * adhere to the schema outlined below
 //
 // ...
-//
-// <https://commitlint.js.org/#/reference-configuration?id=configuration>
 module.exports = {
   // ## Shareable configuration
   //

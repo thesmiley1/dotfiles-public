@@ -271,5 +271,5 @@ module.exports = {
     //
     // <https://commitlint.js.org/#/reference-rules?id=type-min-length>
     'type-min-length': [2, 'always', 0],
-  }
+  },
 }

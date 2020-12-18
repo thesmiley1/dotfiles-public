@@ -1,0 +1,4 @@
+$schema: 'https://json.schemastore.org/commitlintrc'
+
+extends:
+  - '@schroedernet/commitlint-config'

@@ -1,0 +1,24 @@
+lint:
+  before_script:
+    - 'apk update'
+    - 'apk upgrade'
+    - 'apk add git nodejs-current npm'
+    - 'npm ci --cache .npm-cache --prefer-offline'
+
+  cache:
+    key:
+      files:
+        - 'package-lock.json'
+
+    paths:
+      - '.npm-cache'
+
+  image: 'alpine:latest'
+
+  script:
+    - 'npm run lint'
+
+  stage: 'lint'
+
+stages:
+  - 'lint'

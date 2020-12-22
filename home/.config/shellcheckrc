@@ -1,0 +1,28 @@
+# # Shellcheck
+#
+# Static analysis tool for shell scripts
+#
+# <https://github.com/koalaman/shellcheck>
+
+# ## RC files
+#
+# Unless `--norc` is used, ShellCheck will look for a file `.shellcheckrc` or
+# `shellcheckrc` in the script's directory and each parent directory.  If found,
+# it will read `key=value` pairs from it and treat them as file-wide directives.
+#
+# <https://github.com/koalaman/shellcheck/blob/master/shellcheck.1.md#rc-files>
+
+# ## SC1090
+#
+# Can't follow non-constant source
+#
+# <https://github.com/koalaman/shellcheck/wiki/SC1090>
+disable=SC1090
+
+# ## SC1091
+#
+# Not following; reasons include:  file not found, no permissions, not included
+# on the command line, not allowing `shellcheck` to follow files with `-x`, etc.
+#
+# <https://github.com/koalaman/shellcheck/wiki/SC1091>
+disable=SC1091

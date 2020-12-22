@@ -13,4 +13,5 @@ rules:
     'lint',
     'package',
     'profile',
+    'shellcheck',
   ]]

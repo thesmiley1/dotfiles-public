@@ -10,6 +10,7 @@
 	l = log --pretty=full --stat
 	m = merge
 	p = push
+	r = remote
 	rb = rebase
 	s = status
 	ss = status --short

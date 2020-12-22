@@ -6,6 +6,7 @@
 	co = commit
 	d = diff
 	f = fetch --all
+	h = help
 	l = log --pretty=full --stat
 	p = push
 	rb = rebase

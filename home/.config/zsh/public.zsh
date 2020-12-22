@@ -16,7 +16,7 @@ if [[ -d "${plugins_dir}/zsh/plugins" ]]; then
   plugins_dir="${plugins_dir}/zsh/plugins"
 fi
 
-local source_dir="${XDG_CONFIG_HOME:-${HOME}/.config}/zsh/public"
+local source_dir="${XDG_CONFIG_HOME}/zsh/public"
 
 source "${source_dir}/options.zsh"
 

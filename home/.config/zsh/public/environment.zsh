@@ -135,7 +135,7 @@ fi
 # change the settings.  Use the dircolors command to set it.
 
 if type dircolors > /dev/null; then
-  eval "$(dircolors "${XDG_CONFIG_HOME:-${HOME}/.config}/dircolors/database")"
+  eval "$(dircolors "${XDG_CONFIG_HOME}/dircolors/database")"
 fi
 
 ################################################################################
@@ -259,39 +259,6 @@ while read -r "line"; do
   eval "export ${a[1]}"
 done < "${XDG_CONFIG_HOME:-${HOME}/.config}/user-dirs.dirs"
 unset a
-
-################################################################################
-
-# XDG_CACHE_HOME
-#   XDG Base Drectory
-#
-# Defines the base directory relative to which user specific non-essential data
-# files should be stored.
-
-declare -g XDG_CACHE_HOME="${HOME}/.cache"
-export XDG_CACHE_HOME
-
-################################################################################
-
-# XDG_CONFIG_HOME
-#   XDG Base Directory
-#
-# Defines the base directory relative to which user specific configuration files
-# should be stored.
-
-declare -g XDG_CONFIG_HOME="${HOME}/.config"
-export XDG_CONFIG_HOME
-
-################################################################################
-
-# XDG_DATA_HOME
-#   XDG Base Directory
-#
-# Defines the base directory relative to which user specific data files should
-# be stored.
-
-declare -g XDG_DATA_HOME="${HOME}/.local/share"
-export XDG_DATA_HOME
 
 ################################################################################
 

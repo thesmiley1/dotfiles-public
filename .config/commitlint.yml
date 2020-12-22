@@ -2,3 +2,15 @@ $schema: 'https://json.schemastore.org/commitlintrc'
 
 extends:
   - '@schroedernet/commitlint-config'
+
+rules:
+  'scope-enum': [2, always, [
+    'contrib',
+    'deps',
+    'github',
+    'gitlab',
+    'license',
+    'lint',
+    'package',
+    'profile',
+  ]]

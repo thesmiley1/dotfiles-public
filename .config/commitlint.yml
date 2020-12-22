@@ -16,5 +16,6 @@ rules:
     'package',
     'profile',
     'shellcheck',
+    'vscode',
     'yamllint',
   ]]

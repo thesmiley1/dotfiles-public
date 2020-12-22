@@ -28,8 +28,6 @@
   "go.testOnSave": true,
   "go.useLanguageServer": true,
 
-  "markdown.extension.toc.unorderedList.marker": "*",
-
   "material-icon-theme.saturation": 0.7,
   "material-icon-theme.opacity": 1,
 

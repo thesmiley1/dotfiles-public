@@ -34,6 +34,7 @@ done
 
 source "${source_dir}/alias.zsh"
 source "${source_dir}/completion.zsh"
+source "${source_dir}/dotenv.zsh"
 source "${source_dir}/title.zsh"
 source "${source_dir}/zle.zsh"
 source "${source_dir}/zutil.zsh"

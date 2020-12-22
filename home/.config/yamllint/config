@@ -1,4 +1,6 @@
-# https://yamllint.readthedocs.io/en/stable/rules.html
+# <https://yamllint.readthedocs.io/en/stable/configuration.html>
+
+# # Configuration
 
 # ## Extending the default configuration
 #

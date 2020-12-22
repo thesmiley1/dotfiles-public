@@ -16,4 +16,5 @@ rules:
     'package',
     'profile',
     'shellcheck',
+    'yamllint',
   ]]

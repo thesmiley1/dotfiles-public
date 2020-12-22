@@ -12,6 +12,7 @@ rules:
     'gitlab',
     'license',
     'lint',
+    'markdownlint',
     'package',
     'profile',
     'shellcheck',

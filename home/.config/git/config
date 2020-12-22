@@ -8,6 +8,7 @@
 	f = fetch --all
 	h = help
 	l = log --pretty=full --stat
+	m = merge
 	p = push
 	rb = rebase
 	s = status

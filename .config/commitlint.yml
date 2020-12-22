@@ -7,6 +7,7 @@ rules:
   'scope-enum': [2, always, [
     'contrib',
     'deps',
+    'git',
     'github',
     'gitlab',
     'license',

@@ -5,7 +5,7 @@
 	cl = clone
 	co = commit
 	d = diff
-	f = fetch
+	f = fetch --all
 	l = log --stat
 	p = push
 	rb = rebase

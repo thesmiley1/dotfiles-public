@@ -7,7 +7,7 @@
 	d = diff
 	f = fetch --all
 	h = help
-	l = log --pretty=full --stat
+	l = log --pretty=fuller --stat
 	m = merge
 	p = push
 	r = remote
